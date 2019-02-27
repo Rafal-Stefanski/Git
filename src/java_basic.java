@@ -3,7 +3,7 @@
  * Przykładowy tekst:
  * To mój pierwszy program,
  * działa,
- * choć nie wiem jeszcze dlaczego :)
+ * choć nie wiem jeszcze dlaczego.
  */
 
 public class java_basic {
