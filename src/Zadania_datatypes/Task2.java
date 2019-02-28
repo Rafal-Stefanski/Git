@@ -1,16 +1,11 @@
 package Zadania_datatypes;
 
-
-
-// Wersja do Tomasz Sidor
-
-import static java.lang.Math.pow;
+// 2. Napisz program, który tworzy jedną zmienną, a następnie wypisze na ekran jej wartość podniesioną do 3 potęgi.
 
 public class Task2 {
     public static void main(String[] args) {
-        int a = 2;
+        int c = 16;
 
-        System.out.println("a do trzeciej = " + a * a * a);
-
+        System.out.println("c^3 = " + c*c*c);
     }
 }

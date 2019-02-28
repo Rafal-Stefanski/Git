@@ -2,7 +2,6 @@ package Zadania_datatypes;
 
 // 1. Napisz program, który utworzy dwie zmienne, a następnie wypisze na ekran ich sumę, różnicę i iloczyn.
 
-/*
 public class Task1 {
     public static void main(String[] args) {
         int x;
@@ -11,21 +10,12 @@ public class Task1 {
         x = 7;
         y = 13;
 
-        System.out.println("Sum = " + x + y);
-    }
-}
-*/
+        int Sum = x + y;
+        int Quotient = y - x;
+        int Product = x * y;
 
-// wersja od Tomasz Sidor
-public class Task1 {
-    public static void main(String[] args) {
-        int a = 5 , b =2;
-        int suma = a+b;
-        int roznica = a-b;
-        int iloczyn = a*b;
-        System.out.println("a + b = " + suma);
-        System.out.println("a - b = " + roznica);
-        System.out.println("a * b = " + iloczyn);
+        System.out.println("Suma x + y = " + Sum);
+        System.out.println("Iloraz y - x = " + Quotient);
+        System.out.println("Iloczyn x * y = " + Product);
     }
-
 }

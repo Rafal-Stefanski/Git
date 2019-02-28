@@ -1,12 +1,12 @@
 package Zadania_datatypes;
 
 /*
-public class Task5 {
+public class Task5TS {
 }
 
 */
 
-public class Task5 {
+public class Task5TS {
     public static void main(String[] args) {
         int a = 65; // pierwszy znak łaciński
         int b = 1488; // pierwszy znak hebrajski
