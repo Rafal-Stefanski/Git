@@ -1,5 +1,7 @@
 package Testy_i_próby;
 
+import Zadania_oop.Car;
+
 public class HelloWorldApp {
     public static void main(String[] args) {
 
