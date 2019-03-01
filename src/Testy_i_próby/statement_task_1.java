@@ -1,5 +1,6 @@
 
-/*public class statement_task_1 {
+/*
+public class statement_task_1 {
 
     public static void main(String[] args) {
 

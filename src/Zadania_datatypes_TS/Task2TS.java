@@ -4,7 +4,6 @@ package Zadania_datatypes_TS;
 
 // Wersja do Tomasz Sidor
 
-import static java.lang.Math.pow;
 
 public class Task2TS {
     public static void main(String[] args) {
