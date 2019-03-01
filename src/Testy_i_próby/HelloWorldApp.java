@@ -1,3 +1,5 @@
+package Testy_i_próby;
+
 public class HelloWorldApp {
     public static void main(String[] args) {
 

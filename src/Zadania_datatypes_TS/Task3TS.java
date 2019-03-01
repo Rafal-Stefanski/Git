@@ -1,4 +1,4 @@
-package Zadania_datatypes;
+package Zadania_datatypes_TS;
 
 /**
 public class Task3TS {

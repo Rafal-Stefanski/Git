@@ -1,4 +1,4 @@
-
+package Testy_i_próby;
 
 public class Task1 {
     public static void main(String[] args) {
