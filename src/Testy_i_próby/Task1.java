@@ -17,13 +17,6 @@ public class Task1 {
         //robimy iloczyn
         System.out.println(x * y);
 
-        //Task 3
-        int modulo = x * 2;
-        boolean isEven = modulo == 0;
-        System.out.printf("Is even: " + isEven);
-
-
-
     }
 }
 
