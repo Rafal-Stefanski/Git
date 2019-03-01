@@ -1,3 +1,5 @@
+package Testy_i_próby;
+
 /**
  * Komentarz wielowierszowy do tworzenia z niego dokumentacji:
  * Przykładowy tekst:
