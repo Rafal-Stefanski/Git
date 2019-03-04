@@ -11,9 +11,9 @@ public class Task7FahrenheitConverter {
     public static void main(String[] args) {
 
         int f = 212;
-        double converterFnC = ((f - 30) / 1.8);
+        double converterFnC = ((f - 32) / 1.8);
 
-        // double converterCnF =((c * 1.8) + 30);
+        // double converterCnF =((c * 1.8) + 32);
 
         System.out.println("Temperature: " + f + " F deg. is equal to: " + converterFnC + " Celsius deg.");
 
