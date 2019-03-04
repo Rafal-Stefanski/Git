@@ -1,4 +1,4 @@
-package pl.sda.Zadania_coinpo;
+package pl.sda.zadania_coinpo;
 
 /**
  * 1. Rozwiń przykład kompozycji w oparciu o klasę Car - dodaj klasę Entertainment,
