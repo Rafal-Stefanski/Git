@@ -15,18 +15,41 @@ public class Task3 {
         int b = scanner.nextInt();
         System.out.println();
         System.out.println("Dla liczy " + b + ", liczba rzymska to: ");
+        switch (b) {
+            case (1):
+                System.out.println("I");
+                break;
+            case (2):
+                System.out.println("II");
+                break;
+            case (3):
+                System.out.println("III");
+                break;
+            case (4):
+                System.out.println("IV");
+                break;
+            case (5):
+                System.out.println("V");
+                break;
+            case (6):
+                System.out.println("VI");
+                break;
+            case (7):
+                System.out.println("VII");
+                break;
+            case (8):
+                System.out.println("VIII");
+                break;
+            case (9):
+                System.out.println("IX");
+                break;
+            case (10):
+                System.out.println("X");
+                break;
+            default:
+                System.out.println("Out of scale, only 1-10 numbers");
 
-        if (b == 1) System.out.println("I");
-        if (b == 2) System.out.println("II");
-        if (b == 3) System.out.println("III");
-        if (b == 4) System.out.println("IV");
-        if (b == 5) System.out.println("V");
-        if (b == 6) System.out.println("VI");
-        if (b == 7) System.out.println("VII");
-        if (b == 8) System.out.println("VIII");
-        if (b == 9) System.out.println("IX");
-        if (b == 10) System.out.println("X");
-        if (b < 1 || b > 10) System.out.println("Out of scale, only 1-10 numbers");
+        }
 
     }
 }
