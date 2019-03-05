@@ -9,45 +9,77 @@ import java.util.Scanner;
 
 public class Task3 {
     public static void main(String[] args) {
+
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Podaj liczbę całkowitą arabską w zakresie 1-10: ");
-        int b = scanner.nextInt();
+        System.out.print("Podaj liczbę rzymską w zakresie I-IX: ");
+        String romanNumber = scanner.next();
+
         System.out.println();
-        System.out.println("Dla liczy " + b + ", liczba rzymska to: ");
-        switch (b) {
-            case (1):
-                System.out.println("I");
+        System.out.println("Dla liczby " + romanNumber + ", liczba arabska to: ");
+        switch (romanNumber) {
+            case ("I"):
+                System.out.println("1");
                 break;
-            case (2):
-                System.out.println("II");
+            case ("i"):
+                System.out.println("1");
                 break;
-            case (3):
-                System.out.println("III");
+            case ("II"):
+                System.out.println("2");
                 break;
-            case (4):
-                System.out.println("IV");
+            case ("ii"):
+                System.out.println("2");
                 break;
-            case (5):
-                System.out.println("V");
+            case ("III"):
+                System.out.println("3");
                 break;
-            case (6):
-                System.out.println("VI");
+            case ("iii"):
+                System.out.println("3");
                 break;
-            case (7):
-                System.out.println("VII");
+            case ("IV"):
+                System.out.println("4");
                 break;
-            case (8):
-                System.out.println("VIII");
+            case ("iv"):
+                System.out.println("4");
                 break;
-            case (9):
-                System.out.println("IX");
+            case ("V"):
+                System.out.println("5");
                 break;
-            case (10):
-                System.out.println("X");
+            case ("v"):
+                System.out.println("5");
+                break;
+            case ("VI"):
+                System.out.println("6");
+                break;
+            case ("vi"):
+                System.out.println("6");
+                break;
+            case ("VII"):
+                System.out.println("7");
+                break;
+            case ("vii"):
+                System.out.println("7");
+                break;
+            case ("VIII"):
+                System.out.println("8");
+                break;
+            case ("viii"):
+                System.out.println("8");
+                break;
+            case ("IX"):
+                System.out.println("9");
+                break;
+            case ("ix"):
+                System.out.println("9");
+                break;
+            case ("X"):
+                System.out.println("10");
+                break;
+            case ("x"):
+                System.out.println("10");
                 break;
             default:
-                System.out.println("Out of scale, only 1-10 numbers");
+                System.out.println("Tylko wartości w zakresie I-IX!");
 
         }
 
