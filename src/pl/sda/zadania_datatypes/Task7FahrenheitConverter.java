@@ -10,12 +10,13 @@ package pl.sda.zadania_datatypes;
 public class Task7FahrenheitConverter {
     public static void main(String[] args) {
 
-        int f = 212;
-        double converterFnC = ((f - 32) / 1.8);
+        double f = 32; // Fahrenheit Temperature.
+        double converterToC = ((f - 32) / 1.8); // Censius temperature
+        System.out.println("Temperature: " + f + " F deg. is equal to: " + converterToC + " Celsius deg.");
 
-        // double converterCnF =((c * 1.8) + 32);
-
-        System.out.println("Temperature: " + f + " F deg. is equal to: " + converterFnC + " Celsius deg.");
+        f = 212; // Fahren Temperature.
+        converterToC = ((f - 32) / 1.8); // Censius temperature
+        System.out.println("Temperature: " + f + " F deg. is equal to: " + converterToC + " Celsius deg.");
 
     }
 }
