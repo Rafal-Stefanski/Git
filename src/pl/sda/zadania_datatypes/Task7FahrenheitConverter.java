@@ -11,11 +11,11 @@ public class Task7FahrenheitConverter {
     public static void main(String[] args) {
 
         double f = 32; // Fahrenheit Temperature.
-        double converterToC = ((f - 32) / 1.8); // Censius temperature
+        double converterToC = ((f - 32) / 1.8); // Celsius temperature
         System.out.println("Temperature: " + f + " F deg. is equal to: " + converterToC + " Celsius deg.");
 
         f = 212; // Fahren Temperature.
-        converterToC = ((f - 32) / 1.8); // Censius temperature
+        converterToC = ((f - 32) / 1.8); // Celsius temperature
         System.out.println("Temperature: " + f + " F deg. is equal to: " + converterToC + " Celsius deg.");
 
     }
