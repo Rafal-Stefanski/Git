@@ -14,7 +14,7 @@ public class Task7FahrenheitConverter {
         double converterToC = ((f - 32) / 1.8); // Celsius temperature
         System.out.println("Temperature: " + f + " F deg. is equal to: " + converterToC + " Celsius deg.");
 
-        f = 212; // Fahren Temperature.
+        f = 212; // Fahrenheit Temperature.
         converterToC = ((f - 32) / 1.8); // Celsius temperature
         System.out.println("Temperature: " + f + " F deg. is equal to: " + converterToC + " Celsius deg.");
 
