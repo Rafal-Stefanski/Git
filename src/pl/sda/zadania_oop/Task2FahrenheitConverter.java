@@ -27,22 +27,13 @@ public class Task2FahrenheitConverter {
         f=fahrenheitConverter.convertCoF(c);
         System.out.println("Temperature: " + c + "\u00b0 C, is equal to: " + f + "\u00b0 F");
 
-
-//        int f = 212;
-//        double converterFnC = ((f - 32) / 1.8);
-//
-//        // double converterCnF =((c * 1.8) + 32);
-//
-//        System.out.println("Temperature: " + f + " F deg. is equal to: " + converterFnC + " Celsius deg.");
-
-
     }
     private double convertToC (double fahrenheitTemp) {     // Celsius temperature - method
         return ((fahrenheitTemp - 32) / 1.8);
     }
 
 
-    private double convertCoF (double celsiusTemp) {        // Fahrenheit temperature - method
+    public double convertCoF (double celsiusTemp) {        // Fahrenheit temperature - method
         return ((celsiusTemp * 1.8) + 32);
     }
 
