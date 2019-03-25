@@ -1,4 +1,4 @@
-package pl.sda.testy_i_próby;
+package pl.sda.testy_i_próby.udemy;
 
 public class TaskUdemy1 {
     public static void main(String[] args) {
