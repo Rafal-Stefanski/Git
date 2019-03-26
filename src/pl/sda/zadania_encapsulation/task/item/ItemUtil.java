@@ -1,7 +1,7 @@
-package pl.sda.zadania_encapsulation.Task3.item;
+package pl.sda.zadania_encapsulation.task.item;
 
 class ItemUtil {
-    String truncate(String text, int maxLength) {
+    public static String truncate(String text, int maxLength) {
         if (text == null || text.length() < maxLength) {
             return text;
         }
