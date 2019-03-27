@@ -2,7 +2,7 @@ package pl.sda.testy_i_próby;
 
 public class Scope {
 
-    static int x;
+    private static int x;
 
     public static void main(String[] args) {
         int x = 5;
@@ -16,6 +16,7 @@ public class Scope {
     }
 
     static void doSomethingLocally() {
-        int y = 10;
+        int y = 100;
+
     }
 }
