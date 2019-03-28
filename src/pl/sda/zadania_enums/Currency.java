@@ -10,6 +10,7 @@ package pl.sda.zadania_enums;
 //public enum Currency {
 //    PLN("PLN",1), USD("USD", 3.79), EUR("EUR", 4.33), JPY("JPN", 0.034), GBP("GPB", 4.86);
 //
+//
 //    private String symbol;
 //    private String exchangeRate;
 //
