@@ -1,5 +1,7 @@
 package pl.sda.zadania_loops;
 
+import javax.swing.*;
+
 public class Task {
     public static void main(String[] args) {
         //#1
@@ -35,13 +37,25 @@ public class Task {
         System.out.println("checkNo4 = " + checkNo("ala ma kota", "ada"));
         System.out.println();
 
+        //#6
+        System.out.println("Task 6:");
+        sumNumbersFromUser(5);
+        System.out.println();
+
+        //#7
+        System.out.println("Task 7:");
+        rectangle(6, 3);
+        System.out.println();
+        rectangle(5, 5);
+        System.out.println();
+
+
     }
 
     /**
      * 1. Napisz metodę, która wyświetli na ekranie n-pierwszych liczb parzystych. Zmienna n to parametr metody.
      * Czyli np. dla n = 4 program * powinien wypisać: 2, 4, 6, 8
      */
-
     private static void printEvenNumbers(int n) {
         if (n <= 0) {
             return;
@@ -133,6 +147,36 @@ public class Task {
             }
         } while (index != -1);
         return count;
+    }
+
+    /**
+     * 6. Zmień metodę pl.sda.loops.ForLoop.sumNumbersFromUser() tak by przyjmowała liczby typu float.
+     * W podsumowaniu oprócz sumy wypisz także średnią arytmetyczną podanych liczb.
+     */
+    private static void sumNumbersFromUser(int numbersSize) {
+        float   sum = 0;
+        for (int i = 1; i <= numbersSize; i++) {
+            String numberInString = JOptionPane.showInputDialog("Podaj liczbę: ");
+            float numberFromUser = Float.valueOf(numberInString);
+            System.out.println("liczba nr " + i + " to: " + numberFromUser);
+            sum += numberFromUser;
+        }
+
+        System.out.println("sum = " + sum);
+        System.out.println("average = " + sum / numbersSize);
+    }
+
+    /**
+     * 7. Napisz metodę która wyświetli na ekranie prostokąt o podanych rozmiarach: width i height (to są parametry metody).
+     * Podpowiedź: zobacz metodę: pl.sda.loops.ForLoop.leftTriangle()
+     */
+    private static void rectangle(int width, int height) {
+        for (int i = 0; i < height; i++) {
+            for (int j = 0; j < width; j++) { //pętla w pętli
+                System.out.print("*");
+            }
+            System.out.println();
+        }
     }
 
 
