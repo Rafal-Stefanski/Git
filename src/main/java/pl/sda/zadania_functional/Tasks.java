@@ -1,6 +1,5 @@
 package pl.sda.zadania_functional;
 
-import com.sun.istack.internal.Nullable;
 
 import java.util.HashSet;
 import java.util.Optional;
@@ -10,7 +9,6 @@ import java.util.function.BiFunction;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
-import java.util.stream.DoubleStream;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
