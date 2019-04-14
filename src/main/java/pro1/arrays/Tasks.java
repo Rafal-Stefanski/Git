@@ -97,7 +97,7 @@ public class Tasks {
     private static double findMin(double[] numbers) {
 
         //z wykorzystaniem funkcji arrays.
-        //Arrays.sort(numbers);
+        //Arrays.sort_zadania(numbers);
         //return numbers[0];
 
         if (numbers == null || numbers.length == 0) {
