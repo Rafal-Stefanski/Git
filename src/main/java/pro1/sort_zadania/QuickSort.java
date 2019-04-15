@@ -12,7 +12,7 @@ public class QuickSort {
         System.out.println("Posortowana tablica mała:");
         System.out.println(Arrays.toString(tablica));
         System.out.println("tablica random:");
-        int[] tablica1 = tableOfRandom(100, 1, 1000);
+        int[] tablica1 = tableOfRandom(100000, 1, 100000);
         System.out.println(Arrays.toString(tablica1));
         System.out.println("===========//===========//===========//===========");
         System.out.println("Posortowana tablica random:");
