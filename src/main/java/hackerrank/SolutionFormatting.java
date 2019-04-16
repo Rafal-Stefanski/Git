@@ -10,6 +10,7 @@ public class SolutionFormatting {
             String s1=scanner.next();
             int x=scanner.nextInt();
             //Complete this line
+            System.out.printf("%-15s%03d%n", s1, x);
         }
         System.out.println("================================");
 
