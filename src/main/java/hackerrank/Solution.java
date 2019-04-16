@@ -1,4 +1,4 @@
-package pl.sda.testy_i_próby;
+package hackerrank;
 
 import java.util.Scanner;
 
