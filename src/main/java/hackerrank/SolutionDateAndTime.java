@@ -1,16 +1,6 @@
 package hackerrank;
-
 import java.io.*;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Scanner;
-//import java.math.*;
-//import java.security.*;
-//import java.text.*;
-//import java.util.*;
-//import java.util.concurrent.*;
-//import java.util.regex.*;
+import java.util.Calendar;
 
 class Result {
 
@@ -26,16 +16,16 @@ class Result {
 
     public static String findDay(int month, int day, int year) {
 
-//        Scanner in = new Scanner(System.in);
-//        String smonth = in.next();
-//        String sday = in.next();
-//        String syear = in.next();
-//        int nmonth = Integer.parseInt(smonth);
-//        int nday = Integer.parseInt(sday);
-//        int nyear = Integer.parseInt(syear);
-        return null;
-    }
+        Calendar cal = Calendar.getInstance();
 
+        cal.set(Calendar.MONTH, month-1);
+        cal.set(Calendar.DAY_OF_MONTH, day);
+        cal.set(Calendar.YEAR, year);
+
+        String[] day_of_week = {"SUNDAY", "MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY","SATURDAY"};
+
+        return day_of_week[cal.get(Calendar.DAY_OF_WEEK)-1];
+    }
 }
 
 public class SolutionDateAndTime {
