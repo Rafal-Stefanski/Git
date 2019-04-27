@@ -1,6 +1,6 @@
 package testy_i_próby;
 
-import pl.sda.zadania_oop.Car;
+import pl.sda.zadania_oop.car.Car;
 
 public class HelloWorldApp {
     public static void main(String[] args) {
