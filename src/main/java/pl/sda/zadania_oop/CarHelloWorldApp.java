@@ -1,5 +1,7 @@
 package pl.sda.zadania_oop;
 
+import pl.sda.zadania_oop.car.Car;
+
 public class CarHelloWorldApp {
     public static void main(String[] args) {
 
