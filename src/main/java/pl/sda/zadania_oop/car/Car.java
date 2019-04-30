@@ -16,7 +16,8 @@ public class Car {
     private String color;
     private int speed;
 
-    private boolean isMoving = false;
+    private boolean isMoving = true;
+    private boolean carIsOpen = false;
 
     public Car(String brand, String color) {
         this.brand = brand;
@@ -47,6 +48,18 @@ public class Car {
         isMoving = true;
         System.out.println("Car was started!");
     }
+
+    public void stop() {
+        isMoving = false;
+        System.out.println("Car stop!");
+    }
+
+    public void openDoor() {
+        carIsOpen = true;
+        System.out.println("Door is open, get in!");
+
+    }
+
 
     public void setBrand(String brand) {
         this.brand = brand;
