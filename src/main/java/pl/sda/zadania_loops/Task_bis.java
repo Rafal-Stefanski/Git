@@ -1,5 +1,7 @@
 package pl.sda.zadania_loops;
 
+import javax.swing.*;
+
 public class Task_bis {
     public static void main(String[] args) {
         System.out.println("Task #1");
@@ -17,6 +19,7 @@ public class Task_bis {
         System.out.println("Task #3");
 //        printLetters();
         printSomeLetters();
+        System.out.println("Task #3 - bis");
         printEverySecondLetter();
         System.out.println();
 
@@ -29,10 +32,20 @@ public class Task_bis {
         System.out.println();
 
         System.out.println("Task #5");
+        System.out.println("checkNo1 = " + checkNo("me some", "me"));
         System.out.println("checkNo1 = " + checkNo("", "ala"));
         System.out.println("checkNo1 = " + checkNo("ala", "ala"));
         System.out.println("checkNo1 = " + checkNo("ala ma kota", "a"));
         System.out.println("checkNo1 = " + checkNo("ala ma kota", "ada"));
+        System.out.println();
+
+//        System.out.println("Task #6");
+//        sumNumbersFromUser(5);
+//        System.out.println();
+
+        System.out.println("Task #7");
+        showRectangle(7,5);
+        System.out.println();
 
     }
     // Zadania w oddzielnych metodach
@@ -119,23 +132,54 @@ public class Task_bis {
      * Podpowiedź: użyj metody klasy String która sprawdza index dla podanej frazy
      */
 
-
-
-    public static int checkNo(String text, String searchPhrase) {
+    public static int checkNo(String text, String sPhrase) {
         if (text == null || text.isEmpty()) {
             return 0;
         }
         int index = 0;
         int count = 0;
+
         do {
-            index = text.indexOf(searchPhrase, index);
-            if (index != -1){
-                count ++;
-                index = index + searchPhrase.length();
+            index = text.indexOf(sPhrase, index);
+            if (index != -1) {
+                count++;
+                index = index + sPhrase.length();
             }
         } while (index != -1);
         return count;
     }
+
+    /**
+     * 6. Zmień metodę pl.sda.loops.ForLoop.sumNumbersFromUser() tak by przyjmowała liczby typu float.
+     * W podsumowaniu oprócz sumy wypisz także średnią arytmetyczną podanych liczb.
+     */
+    private static void sumNumbersFromUser(int numbersSize) {
+        float sum = 0;
+        for (int i = 1; i <= numbersSize; i++) {
+            String numberInString = JOptionPane.showInputDialog("Podaj liczbę:");
+            float numberFromUser = Float.valueOf(numberInString);
+            System.out.println("Liczba nr " + i + " to: " + numberFromUser);
+            sum = numberFromUser + numberFromUser;
+        }
+
+        System.out.println("sum = " + sum);
+        System.out.println("average = " + sum / numbersSize);
+    }
+
+    /**
+     * 7. Napisz metodę która wyświetli na ekranie prostokąt o podanych rozmiarach: width i height
+     * (to są parametry metody).
+     * Podpowiedź: zobacz metodę: pl.sda.loops.ForLoop.leftTriangle()
+     */
+    private static void showRectangle(int width, int height) {
+        for (int i = 0; i < height; i++) {
+            for (int j = 0; j < width; j++) {
+                System.out.print("#");
+            }
+            System.out.println();
+        }
+    }
+
 
 
 }

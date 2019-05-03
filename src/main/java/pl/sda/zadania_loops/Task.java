@@ -179,6 +179,14 @@ public class Task {
         }
     }
 
+    /**
+     * 8. Utwórz program który będzie pobierał od użytkownika liczby typu float aż do momentu osiągnięcia limitu
+     * podanego jako parametr metody. Na koniec wypisz ile było tych liczb,
+     * jaka była ich suma (z częścią ułamkową) i jaka jest ich średnia arytmetyczna.
+     */
+
+
+
 
 }
 
