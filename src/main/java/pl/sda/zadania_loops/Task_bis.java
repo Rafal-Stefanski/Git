@@ -44,7 +44,11 @@ public class Task_bis {
 //        System.out.println();
 
         System.out.println("Task #7");
-        showRectangle(7,5);
+        showRectangle(7, 5);
+        System.out.println();
+
+        System.out.println("Task #8");
+        sumNumbersFromUserWithLimit(12);
         System.out.println();
 
     }
@@ -54,7 +58,6 @@ public class Task_bis {
      * 1. Napisz metodę, która wyświetli na ekranie n-pierwszych liczb parzystych. Zmienna n to parametr metody.
      * Czyli np. dla n = 4 program * powinien wypisać: 2, 4, 6, 8
      */
-
     private static void printEvenNumbers(int n) {
         if (n <= 0) {
             return;
@@ -180,6 +183,21 @@ public class Task_bis {
         }
     }
 
-
+    /**
+     * 8. Utwórz program który będzie pobierał od użytkownika liczby typu float aż do momentu osiągnięcia
+     * limitu podanego jako parametr metody. Na koniec wypisz ile było tych liczb, jaka była ich suma
+     * (z częścią ułamkową) i jaka jest ich średnia arytmetyczna.
+     */
+    private static void sumNumbersFromUserWithLimit(int limit) {
+        float sum = 0;
+        int count = 1;
+        while (sum <= limit) {
+            String numberInString = JOptionPane.showInputDialog("Podaj liczby (limit: " + limit + "):");
+            float numberFromUser = Float.valueOf(numberInString);
+            sum += numberFromUser;
+            count++;
+        }
+        System.out.printf("count = %d, sum = %.2f, average = %.2f%n", count, sum, sum / count);
+    }
 
 }

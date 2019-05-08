@@ -1,4 +1,4 @@
-package testy_i_próby.Zadania_datatypes_TS;
+package testy_i_próby.zadania_datatypes_TS;
 
 
 
