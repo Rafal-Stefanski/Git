@@ -7,26 +7,29 @@ package pl.sda.zadania_arrays;
 
 public class ArraysTask1 {
     public static void main(String[] args) {
-        ArraysTask1 tasks = new ArraysTask1();
 
-        System.out.println("Task 1");
-        tasks.printStringArray(new String[]{"a", "ab", "abc", "abcd", "abcde"});
-
-
+        System.out.println("===== Task #1 ======");
+        System.out.println();
+        printArrayOfStrings(new String[]{"cos", "ktos", "gdzies", "kiedys"});
     }
 
-    private static void printStringArray(String[] arrOfstrings) {
+    public static void printArrayOfStrings(String[] argOfString) {
+        System.out.println("1. Petla while: ");
         int n = 0;
-        while (n < arrOfstrings.length) {
-            System.out.println(arrOfstrings[n]);
+        while (n < argOfString.length) {
+            System.out.println(argOfString[n]);
             n++;
         }
-        for (int i = 0; i < arrOfstrings.length; i++) {
-            System.out.println(arrOfstrings);
+        System.out.println();
+        System.out.println("2. Petla for: ");
+        for (int m = 0; m < argOfString.length; m++) {
+            System.out.println(argOfString[m]);
         }
-        for (String arrOfString : arrOfstrings) {
-            System.out.println(arrOfString);
+
+        System.out.println();
+        System.out.println("3. Petla for each: ");
+        for (String arrayPoForEach : argOfString) {
+            System.out.println(arrayPoForEach);
         }
     }
-
 }

@@ -32,34 +32,20 @@ public class ArraysTask {
      * 1. Napisz metodę, która jako parametr przyjmuje zmienną typu String[] i wyświetla wszystkie elementy tablicy na
      * konsoli (użyj różnych rodzajów pętli).
      */
-//    private void printStringArray(String[] arrOfStrings) {
-//        int n = 0;
-//        while (n < arrOfStrings.length) {
-//            System.out.println(arrOfStrings[n]);
-//            n++;
-//        }
-//
-//        for (int i = 0; i < arrOfStrings.length; i++) {
-//            System.out.println(arrOfStrings[i]);
-//        }
-//        for (String arrOfString : arrOfStrings) {
-//            System.out.println(arrOfString);
-//        }
-//    }
-    private void printStringArray(String[] arr) {
+
+    private void printStringArray(String[] arrOfStrings) {
         int n = 0;
-        while (n < arr.length) {
-            System.out.println(arr[n]);
+        while (n < arrOfStrings.length) {
+            System.out.println(arrOfStrings[n]);
             n++;
         }
-        for (int i = 0; i < arr.length; i++) {
-            System.out.println(arr[i]);
-        }
-        for (String arrs : arr) {
-            System.out.println(arrs);
-        }
 
-
+        for (int i = 0; i < arrOfStrings.length; i++) {
+            System.out.println(arrOfStrings[i]);
+        }
+        for (String arrOfString : arrOfStrings) {
+            System.out.println(arrOfString);
+        }
     }
 
     /**
@@ -69,10 +55,19 @@ public class ArraysTask {
     private int sumInArr(int[] arrOfInts) {
         int sum = 0;
         for (int num : arrOfInts) {
-            sum += num;
+            sum = sum + num;
         }
         return sum;
     }
+
+
+//    private int sumInArr(int[] arrOfInts) {
+//        int sum = 0;
+//        for (int num : arrOfInts) {
+//            sum += num;
+//        }
+//        return sum;
+//    }
 
     /*
      * 3. Napisz metodę, która jako parametr przyjmuje parametr int count i w wyniku zwraca tablicę wypełnioną

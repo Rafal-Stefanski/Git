@@ -2,17 +2,17 @@ package pl.sda.zadania_arrays;
 
 public class Arrays_Testing {
     public static void main(String[] args) {
-        int[] numbers;
-        numbers = new int[4];
-        numbers[0] = 1;
-        numbers[1] = 2;
-        numbers[2] = 3;
-        numbers[3] = 4;
+        String[] numbers;
+        numbers = new String[4];
+        numbers[0] = "pierwsza wartosc, ";
+        numbers[1] = "druga wartosc, ";
+        numbers[2] = "trzecia wartosc, ";
+        numbers[3] = "czwarta wartosc, ";
         //wypisanie 1 wartości tablicy
         System.out.println(numbers[2]);
         //wypisanie wszystkich wartości tablicy pętlą
         System.out.println("for:");
-        for (int i = 0; i < numbers.length; i++) {
+        for (int i = 0; i < 2; i++) {
             System.out.print(numbers[i]);
         }
         //wypisanie wszystkich wartości tablicy z pętlą for each
