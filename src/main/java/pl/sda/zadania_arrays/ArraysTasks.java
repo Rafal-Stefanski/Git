@@ -1,13 +1,23 @@
 package pl.sda.zadania_arrays;
 
-/**
+/*
  * Napisz metodę, która jako parametr przyjmuje zmienną typu String[]
  * i wyświetla wszystkie elementy tablicy na konsoli (użyj różnych rodzajów pętli).
  */
 
-public class ArraysTask1 {
+/*
+ * 2. Napisz metodę, która jako jedyny parametr przyjmuje zmienną typu int[]
+ * i zwróci sumę wszystkich elementów tablicy.
+ */
+
+/*
+ * 3. Napisz metodę, która jako parametr przyjmuje parametr int count i w wyniku zwraca tablicę wypełnioną
+ * liczbami parzystymi zaczynając od 2, tablica ma zawierać ilość liczb wskazanych przez parametr count.
+ */
+
+public class ArraysTasks {
     public static void main(String[] args) {
-        ArraysTask1 task = new ArraysTask1();
+        ArraysTasks task = new ArraysTasks();
 
         System.out.println("===== Task #1 ======");
         System.out.println();
@@ -15,11 +25,12 @@ public class ArraysTask1 {
 
         System.out.println("\n===== Task #2 ======");
         System.out.println();
-//        int sum = new task.printSumOfInt(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9});
+        int sum = task.printSumOfInt(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9});
+        System.out.println("Suma tablicy intow = " + sum);
 
     }
 
-    public static void printArrayOfStrings(String[] argOfString) {
+    private static void printArrayOfStrings(String[] argOfString) {
         System.out.println("1. Petla while: ");
         int n = 0;
         while (n < argOfString.length) {
@@ -39,5 +50,13 @@ public class ArraysTask1 {
         }
     }
 
-//    public static void printSumOfInt(int[] arrayOfInts);
+    private int printSumOfInt(int[] arrOfInts) {
+        int sum = 0;
+        for (int num : arrOfInts) {
+            sum += num;
+        }
+        return sum;
+    }
+
+
 }
