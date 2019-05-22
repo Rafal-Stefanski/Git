@@ -2,21 +2,6 @@ package pl.sda.zadania_arrays;
 
 import java.util.Arrays;
 
-/*
- * Napisz metodę, która jako parametr przyjmuje zmienną typu String[]
- * i wyświetla wszystkie elementy tablicy na konsoli (użyj różnych rodzajów pętli).
- */
-
-/*
- * 2. Napisz metodę, która jako jedyny parametr przyjmuje zmienną typu int[]
- * i zwróci sumę wszystkich elementów tablicy.
- */
-
-/*
- * 3. Napisz metodę, która jako parametr przyjmuje parametr int count i w wyniku zwraca tablicę wypełnioną
- * liczbami parzystymi zaczynając od 2, tablica ma zawierać ilość liczb wskazanych przez parametr count.
- */
-
 
 public class ArraysTasks {
     public static void main(String[] args) {
@@ -24,7 +9,7 @@ public class ArraysTasks {
 
         System.out.println("===== Task #1 ======");
         System.out.println();
-        printArrayOfStrings(new String[]{"cos", "ktos", "gdzies", "kiedys"});
+        task.printArrayOfStrings(new String[]{"cos", "ktos", "gdzies", "kiedys"});
 
         System.out.println("\n===== Task #2 ======");
         System.out.println();
@@ -36,8 +21,16 @@ public class ArraysTasks {
         int[] arrOfEvents = task.createArrOfEvents(10);
         System.out.println("Tablica parzystych liczb dla 'count' : " + Arrays.toString(arrOfEvents));
 
+        System.out.println("\n===== Task #4 ======");
+        System.out.println();
+        float[] arrOfDoubleFloats = task.doubleFloats(new float[]{1.1f, 1.2f, 1.3f, 1.4f, 1.5f});
+        System.out.println("Tablica podwojonych liczb : " + Arrays.toString(arrOfDoubleFloats));
     }
 
+    /*
+     * 1. Napisz metodę, która jako parametr przyjmuje zmienną typu String[]
+     * i wyświetla wszystkie elementy tablicy na konsoli (użyj różnych rodzajów pętli).
+     */
     // Task #1
     private static void printArrayOfStrings(String[] argOfString) {
         System.out.println("1. Petla while: ");
@@ -59,6 +52,10 @@ public class ArraysTasks {
         }
     }
 
+    /*
+     * 2. Napisz metodę, która jako jedyny parametr przyjmuje zmienną typu int[]
+     * i zwróci sumę wszystkich elementów tablicy.
+     */
     // Task #2
     private int printSumOfInt(int[] arrOfInts) {
         int sum = 0;
@@ -68,11 +65,28 @@ public class ArraysTasks {
         return sum;
     }
 
+    /*
+     * 3. Napisz metodę, która jako parametr przyjmuje parametr int count i w wyniku zwraca tablicę wypełnioną
+     * liczbami parzystymi zaczynając od 2, tablica ma zawierać ilość liczb wskazanych przez parametr count.
+     */
     // Task #3
     private int[] createArrOfEvents(int count) {
         int[] result = new int[count];
         for (int i = 1; i <= count; i++) {
             result[i - 1] = i * 2;
+        }
+        return result;
+    }
+
+    /*
+     * 4. Napisz metodę, która jako parametr przyjmuje tablicę typu float[]
+     * i w wyniku swojego działania powoduje podwojenie wartości dla każdego indeksu przekazanej tablicy.
+     */
+    // Task #4
+    private float[] doubleFloats(float[] floats) {
+        float[] result = new float[floats.length];
+        for (int i = 0; i < floats.length; i++) {
+            result[i] = floats[i] * 2;
         }
         return result;
     }
