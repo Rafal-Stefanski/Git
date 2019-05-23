@@ -25,6 +25,25 @@ public class ArraysTasks {
         System.out.println();
         float[] arrOfDoubleFloats = task.doubleFloats(new float[]{1.1f, 1.2f, 1.3f, 1.4f, 1.5f});
         System.out.println("Tablica podwojonych liczb : " + Arrays.toString(arrOfDoubleFloats));
+
+        System.out.println("\n===== Task #5 ======");
+        System.out.println();
+        task.printDoubles(new double[]{});
+        task.printDoubles(new double[]{1.123});
+        task.printDoubles(new double[]{99.9, 101.01});
+        task.printDoubles(new double[]{1.1, 1.2, 1.3, 1.4, 1.5});
+        task.printDoubles(new double[]{2.0, 5.0, 7.0, 11.0});
+
+        System.out.println("\n===== Task #6 ======");
+        System.out.println();
+        Car[] odwroconaTabela = task.reverseArrayCars(new Car[]{
+            new Car("Toyota", "Corolla"),
+            new Car("Toyota", "RAV4"),
+            new Car("BMW", "3"),
+            new Car("KIA", "Ceed"),
+            new Car("Ford", "Mustang"),
+        });
+        System.out.println("Odwrocona table samochodow to: " + Arrays.toString(odwroconaTabela));
     }
 
     /*
@@ -87,6 +106,53 @@ public class ArraysTasks {
         float[] result = new float[floats.length];
         for (int i = 0; i < floats.length; i++) {
             result[i] = floats[i] * 2;
+        }
+        return result;
+    }
+
+    /*
+     *5. Napisz metodę, która jako parametr przyjmuje zmienną typu double[] i wyświetla na konsoli:
+     * pierwszy, środkowy (jeden lub dwa środkowe) i ostatni element tablicy,
+     * a także średnią arytmetyczną wszystkich liczb z tabeli.
+     */
+    // Task #5
+    private void printDoubles(double[] dubli) {
+        if (dubli.length > 0) {
+            System.out.println("Pierwszy element tablicy: " + dubli[0]);
+            System.out.println("Ostatni element tablicy: " + dubli[dubli.length - 1]);
+            if (dubli.length > 1) {
+                if (dubli.length % 2 == 0) {
+                    System.out.println("Parzysta licza elementow w tabeli, brak srodkowego, " +
+                            "dwa elementy ze srodka to: " + dubli[dubli.length / 2 - 1] + ", " +
+                            dubli[dubli.length / 2]);
+                } else {
+                    System.out.println("Srodkowy element tabeli to: " + dubli[Math.round(dubli.length / 2)]);
+                }
+            } else {
+                System.out.println("Tablica ma tylko 1 element, ktory jest jednoczesnie srodkowy: " + dubli[0]);
+            }
+
+            double suma = 0.0;
+            for (double num : dubli) {
+                suma += num;
+            }
+            System.out.println("Srednia: " + suma / dubli.length);
+        } else {
+            System.out.println("Tablica dubli jest pusta!");
+        }
+    }
+
+    /*
+     * 6. Napisz metodę, która jako parametr przyjmuje zmienną typu Car[] (klasę Car powinieneś mieć
+     * utworzoną w ramach poprzednich zadań) i zwróci tablicę z odwróconą kolejnością elementów.
+     */
+    // Task #6
+    private Car[] reverseArrayCars(Car[] samochodziki) {
+        Car[] result = new Car[samochodziki.length];
+        int i = samochodziki.length - 1;
+        for (Car samochodzik : samochodziki) {
+            result[i] = samochodzik;
+            i--;
         }
         return result;
     }
