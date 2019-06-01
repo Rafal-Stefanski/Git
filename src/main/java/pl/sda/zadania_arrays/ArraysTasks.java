@@ -157,4 +157,9 @@ public class ArraysTasks {
         return result;
     }
 
+    /*
+     * 7. Przerób każdą z poprzednich metod (poza nr 3) tak żeby przyjmowała parametry jako varargs.
+     */
+    // Task #6
+
 }
