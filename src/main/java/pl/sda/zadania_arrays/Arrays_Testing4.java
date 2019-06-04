@@ -2,14 +2,18 @@ package pl.sda.zadania_arrays;
 
 public class Arrays_Testing4 {
     public static void main(String[] args) {
-        int[] ints;
-        ints = new int[5];
-        ints[0] = 12;
-        ints[1] = 23;
-        ints[2] = 34;
-        ints[3] = 45;
-        ints[5] = 56;
-
-        System.out.println(ints[1]);
+        int[] tabelka;
+        tabelka = new int[5];
+        tabelka[0] = 12;
+        tabelka[1] = 23;
+        tabelka[2] = 34;
+        tabelka[3] = 45;
+        tabelka[4] = 56;
+        System.out.println("Single value from array:");
+        System.out.println(tabelka[1]);
+        System.out.println("All values from array:");
+        for (int i = 0; i < tabelka.length; i++) {
+            System.out.println("pos: " + i + ", value: " + tabelka[i]);
+        }
     }
 }
