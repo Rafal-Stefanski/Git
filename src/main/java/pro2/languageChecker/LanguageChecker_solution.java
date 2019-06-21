@@ -10,7 +10,7 @@ public class LanguageChecker_solution {
     public static void main(String[] args) throws APIError, FileNotFoundException {
         DetectLanguage.apiKey = "6e4f850361c3d2eab677d3a794206ee8";
 
-        File folder = new File("src\\main\\resources");
+        File folder = new File("src\\main\\resources\\languageDetect");
         File[] files = folder.listFiles();
 
         for (File file : files) {

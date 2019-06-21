@@ -15,8 +15,7 @@ public class LanguageChecker {
         System.out.println(language);
 
         Scanner file_chunichi = new Scanner(new FileReader
-                ("C:\\Users\\RS\\Dropbox\\" +
-                        "JAVAgda24 materiały\\Artykuly_LanguageDetect\\chunichi.txt"));
+                ("src\\main\\resources\\languageDetect"));
         String line = file_chunichi.nextLine();
 
         while (file_chunichi.hasNextLine()) {
