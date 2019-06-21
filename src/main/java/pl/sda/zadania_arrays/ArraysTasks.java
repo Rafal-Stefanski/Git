@@ -37,13 +37,19 @@ public class ArraysTasks {
         System.out.println("\n===== Task #6 ======");
         System.out.println();
         Car[] odwroconaTabela = task.reverseArrayCars(new Car[]{
-            new Car("Toyota", "Corolla"),
-            new Car("Toyota", "RAV4"),
-            new Car("BMW", "3"),
-            new Car("KIA", "Ceed"),
-            new Car("Ford", "Mustang"),
+                new Car("Toyota", "Corolla"),
+                new Car("Toyota", "RAV4"),
+                new Car("BMW", "3"),
+                new Car("KIA", "Ceed"),
+                new Car("Ford", "Mustang"),
         });
         System.out.println("Odwrocona table samochodow to: " + Arrays.toString(odwroconaTabela));
+
+        System.out.println("\n===== Task #8 ======");
+        System.out.println();
+        int SumOfIntInMultiArray = task.printSumOfIntInMultiArray(new int[][]{{1, 2, 3, 4, 5, 6, 7, 8, 9}, {3, 4, 5}});
+        System.out.println("Suma tablicy intow = " + SumOfIntInMultiArray);
+
     }
 
     /*
@@ -160,6 +166,34 @@ public class ArraysTasks {
     /*
      * 7. Przerób każdą z poprzednich metod (poza nr 3) tak żeby przyjmowała parametry jako varargs.
      */
-    // Task #6
+    // w pliku: ArraysTasksToVarargs.java
 
+    /* 8. * Przerób metodę z zadania nr 2 tak, żeby metoda przyjmowała tablicę dwuwymiarową
+     * typu int[][] i liczyła sumę zwszystkich tablic.
+     */
+
+    // Task #8
+    private int printSumOfIntInMultiArray(int[][] arrayOfArrays) {
+        int sum = 0;
+        for (int[] num : arrayOfArrays) {
+            sum += printSumOfInt(num);
+        }
+        return sum;
+    }
+
+    //private int printSumOfInt(int[] arrOfInts) {
+    //        int sum = 0;
+    //        for (int num : arrOfInts) {
+    //            sum += num;
+    //        }
+    //        return sum;
+    //    }
+
+    //private int sumIntMultiArray(int[][] arrayOfArrays) {
+    //        int sum = 0;
+    //        for (int[] ints : arrayOfArrays) {
+    //            sum += sumIntArray(ints);
+    //        }
+    //        return sum;
+    //    }
 }
