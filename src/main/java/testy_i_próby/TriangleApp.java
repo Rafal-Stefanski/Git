@@ -4,7 +4,7 @@ public class TriangleApp {
     Triangle test_triangle = new Triangle();
     boolean result = test_triangle.isRectangular(3, 4, 5);
     // int a = 3;
-    // int b = 4;
+    // int niedz = 4;
     // int c = 5;
     // Triangle is rectangular
 

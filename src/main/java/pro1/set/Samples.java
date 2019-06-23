@@ -199,10 +199,10 @@ public class Samples {
         System.out.println("fruits.last() = " + fruits.last());
 
         //pobieramy pierwszy element, który jest większy lub równy podanemu argumentowi
-        System.out.println("fruits.ceiling(b) = " + fruits.ceiling("b"));
+        System.out.println("fruits.ceiling(niedz) = " + fruits.ceiling("niedz"));
         System.out.println("fruits.ceiling(banana) = " + fruits.ceiling("banana"));
         //pobieramy pierwszy element, który jest mniejszy lub równy podanemu argumentowi
-        System.out.println("fruits.floor(b) = " + fruits.floor("b"));
+        System.out.println("fruits.floor(niedz) = " + fruits.floor("niedz"));
         System.out.println("fruits.floor(banana) = " + fruits.floor("banana"));
 
         System.out.println("fruits.ceiling(t) = " + fruits.ceiling("t"));
