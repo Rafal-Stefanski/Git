@@ -1,4 +1,4 @@
-package pro2.languageChecker;
+package pro2.weekend1.languageChecker;
 import com.detectlanguage.DetectLanguage;
 import com.detectlanguage.errors.APIError;
 

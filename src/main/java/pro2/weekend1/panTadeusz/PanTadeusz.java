@@ -1,4 +1,4 @@
-package pro2.panTadeusz;
+package pro2.weekend1.panTadeusz;
 
 import java.io.*;
 import java.util.ArrayList;

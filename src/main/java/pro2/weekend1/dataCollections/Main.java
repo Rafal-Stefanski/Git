@@ -1,4 +1,4 @@
-package pro2.dataCollections;
+package pro2.weekend1.dataCollections;
 
 import java.util.Comparator;
 import java.util.List;

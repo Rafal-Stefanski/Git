@@ -1,4 +1,4 @@
-package pro2.chuckNorissJokes.solution;
+package pro2.weekend1.chuckNorissJokes.solution;
 
 import com.google.gson.Gson;
 
@@ -19,8 +19,8 @@ public class Main {
     private static String downloadNewJoke() throws IOException {
         String link = "https://api.chucknorris.io/jokes/random";
 
-        URL url = new URL(link);
 
+        URL url = new URL(link);
         URLConnection conn = url.openConnection();
         conn.setRequestProperty("User-Agent", "Chrome");
         InputStream inputStream = conn.getInputStream();

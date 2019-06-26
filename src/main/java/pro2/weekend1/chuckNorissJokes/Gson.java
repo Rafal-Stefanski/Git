@@ -1,4 +1,4 @@
-package pro2.chuckNorissJokes;
+package pro2.weekend1.chuckNorissJokes;
 
 public class Gson {
     public String categories = null;
