@@ -46,20 +46,12 @@ public class PanTadeusz {
         System.out.println("Total word count = " + countWord);
 
 
-
-
         List<String> slowa = new ArrayList<String>();
         while (scanner.hasNextLine()) {
             slowa.add(scanner.nextLine());
         }
 
-
-
-
-
-
 //        System.out.println(scanner);
-
 
     }
 }
