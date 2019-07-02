@@ -30,8 +30,8 @@ public class Main {
                 listaOdpowiedzi.add(odp);
             }
 
-            ZadanieQuizowe zad = new ZadanieQuizowe(pytanie, listaOdpowiedzi);
-            zadania.add(zad);
+//            ZadanieQuizowe zad = new ZadanieQuizowe(pytanie, listaOdpowiedzi);
+//            zadania.add(zad);
         }
         return zadania;
     }

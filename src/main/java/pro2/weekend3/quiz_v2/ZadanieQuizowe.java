@@ -6,9 +6,9 @@ public class ZadanieQuizowe {
     String pytanie;
     String[] odpowiedzi;
 
-    public ZadanieQuizowe(String pytanie, List<String> odpowiedzi) {
-        this.pytanie = pytanie;
-        this.odpowiedzi = odpowiedzi;
-    }
+//    public ZadanieQuizowe(String pytanie, List<String> odpowiedzi) {
+//        this.pytanie = pytanie;
+//        this.odpowiedzi = odpowiedzi;
+//    }
 }
 

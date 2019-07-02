@@ -1,4 +1,4 @@
-package pro2.weekend1.zadanie_sms.solution;
+package pro2.weekend1.sms.solution;
 
 import java.util.Scanner;
 

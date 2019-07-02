@@ -1,4 +1,4 @@
-package pro2.weekend1.zadanie_sms;
+package pro2.weekend1.sms;
 
 
 import java.util.Arrays;
