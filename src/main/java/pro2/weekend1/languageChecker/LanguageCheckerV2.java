@@ -26,7 +26,7 @@ public class LanguageCheckerV2 {
         while (scanner.hasNextLine()) {
             String line =  scanner.nextLine();
             stringBuilder.append(line);
-            stringBuilder.append(" ");
+            stringBuilder.append(" "); // po co jest ta linia??
         }
         return DetectLanguage.simpleDetect(stringBuilder.toString());
     }
