@@ -1,4 +1,4 @@
-package testy_i_próby.obiektowosc;
+package testy_i_próby.cwieczenia_java_start.obiektowosc;
 
 public class Person {
     String name;
