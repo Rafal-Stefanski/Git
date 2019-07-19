@@ -33,4 +33,5 @@ package pro2.weekend1.currencyExchangeRate;
 
 public class Rates {
 
+
 }
