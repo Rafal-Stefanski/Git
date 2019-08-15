@@ -1,6 +1,6 @@
 package testy_i_próby.cwieczenia_java_start.dziedziczenie;
 
-public class Dog extends Animal {
+public class Dog extends Animal { // zapis extends to dziedziczenia po klasie Animal
 
     @Override
     public void speak() {

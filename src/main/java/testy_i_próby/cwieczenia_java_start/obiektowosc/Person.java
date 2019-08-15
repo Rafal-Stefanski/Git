@@ -15,7 +15,16 @@ public class Person {
             System.out.println("Cześć, jestem " + name + ". Mam " + age + " lat.");
         }
     }
-    static int ileRazySiePrzedstawili(){
+    int ileRazySiePrzedstawili(){
         return ileRazy;
+        // dodanie przedrostka static - pole jest statyczne i jest przypisane do całej klasy,
+        // możemy wtedy podać w kasie App, pole Person.ileRazySiePrzedstawili(), zliczając wszystko wystąpienia metody,
+        // dla wszystkich obiektów w klasie Person.
+
+        // brak przedrostka static - metoda jest przypisana do obiektu,
+        // możemy wtedy podać w kasie App, pole pawel.ileRazySiePrzedstawili()
+        // i tak samo mikolaj.ileRazySiePrzedstawili(), zliczając tylko wystąpienia dla poszczególnych obiektów,
+        // "pawel" i "mikolaj".
+
     }
 }

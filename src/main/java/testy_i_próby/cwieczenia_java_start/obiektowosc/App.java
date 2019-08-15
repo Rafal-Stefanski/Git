@@ -19,12 +19,17 @@ public class App {
 
         pawel.przedstawSie(true);
         mikolaj.przedstawSie(true);
-        pawel.przedstawSie(false);
+//        pawel.przedstawSie(false);
         mikolaj.przedstawSie(false);
 
-        int ileRazy = Person.ileRazySiePrzedstawili();
+//        int ileRazy;
 
-        System.out.println("\nOsoby przedstawiły się " + ileRazy + " razy.");
+//        Wywołanie metody ileRazySiePrzedstawili jako Person.ileRazySiePrzedstawili(), zlicza ilosc dla całej klasy
+//        wszystkich wystapien, wowczas metoda w klasie Person zaczyna sie od przedrostka static.
+//        System.out.println("\nOsoby przedstawiły się " + Person.ileRazySiePrzedstawili() + " razy.");
+
+        System.out.println("\nPaweł, przedstawił się: " + pawel.ileRazySiePrzedstawili() + " razy.");
+        System.out.println("Mikołaj, przedstawił się: " + mikolaj.ileRazySiePrzedstawili() + " razy.");
 
     }
 }

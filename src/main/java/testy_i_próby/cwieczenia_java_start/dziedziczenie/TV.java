@@ -5,10 +5,6 @@ public class TV {
     private String name;
     private boolean onOff;
 
-    public TV() {
-
-    }
-
     public TV(int aSize, String name) {
         size = aSize;
         this.name = name;
