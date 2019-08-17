@@ -11,9 +11,22 @@ public class Nosy extends TV {
             System.out.println("TV is OFF");
         }
 
+
     }
 
-//    @Override
+    @Override
+    public String toString() {
+        return "Metoda toString klasy Nosy";
+    }
+
+    @Override
+    public void changeChannel() {
+        System.out.println("Zmiana kanału");
+    }
+
+
+
+    //    @Override
 //    public String toString() {
 //        return "Nosy{}";
 //    }

@@ -16,9 +16,7 @@ public class Home {
         if (s1.equals(s2)) {
             System.out.println("s1.equals(s2)");
         }
-        if (s1 instanceof Object) {
-            System.out.println("s1 instanceof Object");
-        }
+
         if (n instanceof Object) {                          // wytłumaczenie youtube 14:00
             System.out.println("s1 instanceof Object");
         }

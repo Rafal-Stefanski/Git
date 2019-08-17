@@ -5,11 +5,12 @@ package testy_i_próby.cwieczenia_java_start.klasy_abstrakcyjne_interfejsy_met_e
  * https://www.youtube.com/watch?v=xtelEWWixic
  */
 
-public abstract class TV {
+public abstract class TV implements ChangeChannel, Change {
     public abstract void tvOn(boolean b);
 
     @Override
     public String toString() {
-        return "Metoda toString klasy Nosy";
+        return "Metoda toString klasy TV";
     }
+
 }
