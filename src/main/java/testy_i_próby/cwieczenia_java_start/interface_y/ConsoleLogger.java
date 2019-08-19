@@ -1,4 +1,4 @@
-package testy_i_próby.cwieczenia_java_start.interfacey;
+package testy_i_próby.cwieczenia_java_start.interface_y;
 
 public class ConsoleLogger implements Logger {
 

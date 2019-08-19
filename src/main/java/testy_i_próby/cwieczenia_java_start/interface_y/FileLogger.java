@@ -1,4 +1,4 @@
-package testy_i_próby.cwieczenia_java_start.interfacey;
+package testy_i_próby.cwieczenia_java_start.interface_y;
 
 import java.io.File;
 import java.io.FileWriter;
