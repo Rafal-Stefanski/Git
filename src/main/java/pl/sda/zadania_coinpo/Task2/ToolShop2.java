@@ -16,6 +16,15 @@ public class ToolShop2 {
         System.out.println("Pila " + pilaNr1.getModel() + ", kosztuje: " + pilaNr1.getPrice() + ",- PLN");
         System.out.println("Pila " + pilaNr2.getModel() + ", kosztuje: " + pilaNr2.getPrice() + ",- PLN");
 
+        System.out.println("=== Shopping Cart task ===");
+        ShoppingCart2 shoppingCart = new ShoppingCart2();
+        shoppingCart.add(mlotekNr1);
+        shoppingCart.add(mlotekNr3);
+        shoppingCart.add(pilaNr2);
+
+        shoppingCart.display();
+
+        System.out.println("Final price for you shopping cart is = " + shoppingCart.getFinalPrice());
 
     }
 

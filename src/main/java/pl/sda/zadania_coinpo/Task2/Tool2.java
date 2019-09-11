@@ -16,4 +16,8 @@ public class Tool2 {
     public double getPrice() {
         return price;
     }
+
+    public String info() {
+        return "Tool - `" + model + "` with the price = " + price;
+    }
 }
