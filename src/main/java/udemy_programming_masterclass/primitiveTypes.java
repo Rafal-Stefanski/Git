@@ -1,6 +1,7 @@
 package udemy_programming_masterclass;
 
-public class IntMaxMin {
+public class primitiveTypes {
+
     public static void main(String[] args) {
         // Wyswietlnie maxymalnej wartosci int'a
         int myIntMaxValue = Integer.MAX_VALUE;
@@ -57,3 +58,4 @@ public class IntMaxMin {
         System.out.println("Challenge short number is: " + validTotalShort);
     }
 }
+
