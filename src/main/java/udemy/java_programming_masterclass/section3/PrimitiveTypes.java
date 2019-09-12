@@ -1,6 +1,6 @@
-package udemy.java_programming_masterclass;
+package udemy.java_programming_masterclass.section3;
 
-public class primitiveTypes {
+public class PrimitiveTypes {
 
     public static void main(String[] args) {
         // Wyswietlnie maxymalnej wartosci int'a
