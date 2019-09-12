@@ -1,4 +1,4 @@
-package udemy_programming_masterclass;
+package udemy.java_programming_masterclass;
 
 public class primitiveTypes {
 

@@ -1,4 +1,4 @@
-package testy_i_próby.udemy.game;
+package udemy.udemy_java_courses.game;
 
 public abstract class GameObject {
     private int x;

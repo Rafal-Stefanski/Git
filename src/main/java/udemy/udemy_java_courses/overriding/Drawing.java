@@ -1,4 +1,4 @@
-package testy_i_próby.udemy.overriding;
+package udemy.udemy_java_courses.overriding;
 
 import javax.swing.*;
 import java.awt.*;

@@ -1,4 +1,4 @@
-package testy_i_próby.udemy;
+package udemy.udemy_java_courses;
 
 public class TaskUdemyConditionals {
     public static void main(String[] args) {

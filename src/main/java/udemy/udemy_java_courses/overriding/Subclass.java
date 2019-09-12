@@ -1,4 +1,4 @@
-package testy_i_próby.udemy.overriding;
+package udemy.udemy_java_courses.overriding;
 
 // Subclass dziedziczy zmienne i metody zdefioniowane w Base
 public class Subclass extends Base {
