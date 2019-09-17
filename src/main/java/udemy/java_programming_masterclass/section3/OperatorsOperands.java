@@ -46,10 +46,42 @@ public class OperatorsOperands {
             System.out.println("And I am scared of aliens!");
         }
 
-        int topScore = 100;
+        int topScore = 80;
         if (topScore >= 100) {
             System.out.println("You got the high score!");
         }
+        // AND '&&' operator
+        int secondTopScore = 60;
+        if ((topScore > secondTopScore) && (topScore < 100)) {
+            System.out.println("Greater than second top score nad less than 100");
+        }
+
+        // OR '||' operator
+        if ((topScore > 90) || (secondTopScore <= 90)) {
+            System.out.println("Either or both the conditions are true.");
+        }
+
+        // Assignment operator vs equlas to operators
+        int newValue = 50;
+        if (newValue == 50) {
+            System.out.println("This is an '==' in if and it's true.");
+        }
+
+        // Boolean
+        boolean isCar = false;
+        if (isCar) { // '!' is A NOT operator so will work for '!isCar'
+            System.out.println("This is not supposed to happen, " +
+                    "because there should be '==' operator");
+        }
+
+        // Ternaty operator - operator trójskładnikowy
+        isCar = true;
+        boolean wasCar = isCar ? true : false;
+        if (wasCar) {
+            System.out.println("wasCar is true");
+        }
+
+
     }
 
 }
