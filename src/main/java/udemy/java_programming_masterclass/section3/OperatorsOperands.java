@@ -14,6 +14,7 @@ public class OperatorsOperands {
         System.out.println("2 * 10 = " + result);
         result = result / 5; // 20 / 5 = 4
         System.out.println("20 / 5 = " + result);
+        // Modulo remainder
         result = result % 3;    // the remainder of (4 % 3) = 1
         System.out.println("4 % 3 = " + result);
 
@@ -81,7 +82,30 @@ public class OperatorsOperands {
             System.out.println("wasCar is true");
         }
 
-
+        // Challenge
+        System.out.println("\n=== Challenge ===");
+        double firstDoubleValue = 20.00d;
+        double secondDoubleValue = 80.00d;
+        double totalSumAndMultiplyValue = (firstDoubleValue + secondDoubleValue) * 100.00d;
+        System.out.println("totalSumAndMultiplyValue is: " + totalSumAndMultiplyValue);
+        double remainderValueDivider = 40.00d;
+        System.out.println("remainderValueDivider is: " + remainderValueDivider);
+        double remainderValue = totalSumAndMultiplyValue % remainderValueDivider;
+        System.out.println("remainderValue from totalSumAndMultiplyValue and remainderValueDivider is: " + remainderValue);
+        boolean remainderValueIsZero = false;
+        if (remainderValue == 0) {
+            remainderValueIsZero = true;
+            System.out.println("remainderValue is 0 which is " + remainderValueIsZero);
+        } else {
+            remainderValueIsZero = false;
+            System.out.println("\nGot some remainder.\nremainderValue is not 0 so remainderValueIsZero is " + remainderValueIsZero);
+        }
+        //other way
+        boolean isNoRemainder = (remainderValue==0) ? true : false;
+        System.out.println("\nAlternative solution for isNoRemainder: " + isNoRemainder);
+        if (!isNoRemainder) {
+            System.out.println("Got some remainder.");
+        }
     }
 
 }
