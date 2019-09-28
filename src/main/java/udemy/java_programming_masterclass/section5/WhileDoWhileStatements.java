@@ -31,7 +31,8 @@ public class WhileDoWhileStatements {
             }
         } while (count != 6);
 
-        System.out.println("\nis even number: 5 - " + isEvenNumber(5));
+        System.out.println("\n-- is even number --");
+        System.out.println("is even number: 5 - " + isEvenNumber(5));
 
         System.out.println("\n-- while loop --");
         int number = 4;
