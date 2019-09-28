@@ -27,7 +27,9 @@ public class SwitchStatementExmpl {
             case 'B':
                 System.out.println("Letter is B");
                 break;
-            case 'C': case 'D': case 'E':
+            case 'C':
+            case 'D':
+            case 'E':
                 System.out.println("Letter is " + letterValue);
                 break;
             default:
@@ -47,5 +49,60 @@ public class SwitchStatementExmpl {
                 System.out.println("Not sure..");
                 break;
         }
+        System.out.println("\n=== Challenge === using switch/case");
+        printDayOfTheWeek(5);
+        System.out.println("\n=== Challenge ===  using if/else");
+        printDayOfTheWeek("Friday");
+
     }
+
+    public static void printDayOfTheWeek(int day) {
+        switch (day) {
+            case 1:
+                System.out.println("Monday");
+                break;
+            case 2:
+                System.out.println("Tuesday");
+                break;
+            case 3:
+                System.out.println("Wednesday");
+                break;
+            case 4:
+                System.out.println("Thursday");
+                break;
+            case 5:
+                System.out.println("Friday");
+                break;
+            case 6:
+                System.out.println("Saturday");
+                break;
+            case 7:
+                System.out.println("Sunday");
+                break;
+            default:
+                System.out.println(day + "? There is no such a day.");
+
+        }
+    }
+
+    public static void printDayOfTheWeek(String day) {
+        if (day.toLowerCase().equals("monday")) {
+            System.out.println(day + " is day no 1");
+        } else if (day.toLowerCase().equals("tuesday")) {
+            System.out.println(day + " is day no 2");
+        } else if (day.toLowerCase().equals("wednesday")) {
+            System.out.println(day + " is day no 3");
+        } else if (day.toLowerCase().equals("thursday")) {
+            System.out.println(day + " is day no 4");
+        } else if (day.toLowerCase().equals("friday")) {
+            System.out.println(day + " is day no 5");
+        } else if (day.toLowerCase().equals("saturday")) {
+            System.out.println(day + " is day no 6");
+        } else if (day.toLowerCase().equals("sunday")) {
+            System.out.println(day + " is day no 7");
+        } else {
+            System.out.println(day + "Is there some mistake in spelling?");
+        }
+    }
+
 }
