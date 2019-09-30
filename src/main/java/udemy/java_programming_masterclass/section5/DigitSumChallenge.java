@@ -1,38 +1,37 @@
 package udemy.java_programming_masterclass.section5;
 
 public class DigitSumChallenge {
-    public static void main(String[] args) {
-        int testowaliczba = 1;                 // z 123
-        int wyciagZProcent = testowaliczba % 10; // wyciaga 3
-        int wyciagZeSlash = testowaliczba / 10;  // wyciaga 12
 
-        System.out.println(wyciagZProcent);
-        System.out.println(wyciagZeSlash);
-        System.out.println("=== Challenge ===");
-        System.out.println("-> " + sumDigits(125));
+    public static void main(String[] args) {
+        int testowaLiczba = 123;                 // z 123
+        int wyciagZProcent = testowaLiczba % 10; // wyciaga 3
+        int wyciagZeSlash = testowaLiczba / 10;  // wyciaga 12
+
+        System.out.println("Testowanie działań, na " + "testowaLiczba: " + testowaLiczba);
+        System.out.println("testowaLiczba % 10 = " + wyciagZProcent + ", testowaLiczba / 10 = " + wyciagZeSlash);
+
+        System.out.println("\n=== Challenge ===");
+        System.out.println("sumDigits(125)-> " + sumDigits(125));
+        System.out.println("sumDigits(-125)-> " + sumDigits(-125));
+        System.out.println("sumDigits(4)-> " + sumDigits(4));
+        System.out.println("sumDigits(number)-> " + sumDigits(32123));
     }
 
-
     public static int sumDigits(int number) {
+        if (number < 10) {
+            return -1;
+        }
+
         int sum = 0;
         do {
-            sum = sum + (number % 10);
-        } while (number / 10 == 0);
+            sum += (number % 10);
+            number = number / 10;
+        } while (number / 10 != 0);
 
-
-        //        if (number < 10) {
-//            return -1;
-//        }
-//
-//        do {
-//            sum += number % 10;
-//        } while (number > 9);
-//        return sum;
-
-//        int sumOfDigits = 0;
-//        for (int i = number % 10; i > 9; i = number / 10) {
-//            sumOfDigits += i;
-//        }
+        while (number / 10 < 10) { //cos nie gra, nie zatrzymuje petli
+            sum += number;
+            break;
+        }
         return sum;
     }
 }
