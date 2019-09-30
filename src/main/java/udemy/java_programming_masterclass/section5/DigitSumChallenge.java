@@ -14,7 +14,7 @@ public class DigitSumChallenge {
         System.out.println("sumDigits(125)-> " + sumDigits(125));
         System.out.println("sumDigits(-125)-> " + sumDigits(-125));
         System.out.println("sumDigits(4)-> " + sumDigits(4));
-        System.out.println("sumDigits(number)-> " + sumDigits(32123));
+        System.out.println("sumDigits(32123)-> " + sumDigits(32123));
     }
 
     public static int sumDigits(int number) {
@@ -28,7 +28,7 @@ public class DigitSumChallenge {
             number = number / 10;
         } while (number / 10 != 0);
 
-        while (number / 10 < 10) { //cos nie gra, nie zatrzymuje petli
+        while (number / 10 < 10) {
             sum += number;
             break;
         }
