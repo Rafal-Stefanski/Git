@@ -1,4 +1,4 @@
-package udemy.java_programming_masterclass.section5.exercise15;
+package udemy.java_programming_masterclass.section5.exercise14;
 
 public class SumOddRange {
 
