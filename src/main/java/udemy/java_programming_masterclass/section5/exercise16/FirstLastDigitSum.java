@@ -7,11 +7,17 @@ public class FirstLastDigitSum {
         }
 
         int lastDigit = number % 10;
-        int firstDigit = 0;
+        int firstDigit = number;
 
-        while (lastDigit != 0) {
+        if (number < 10) {
+            return firstDigit * 2;
+        }
+
+        while (firstDigit / 10 > 0) { // nie działa!
+            firstDigit = number / 10;
 
         }
+
 
 
         return firstDigit + lastDigit;
