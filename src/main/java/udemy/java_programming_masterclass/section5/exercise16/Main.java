@@ -2,6 +2,6 @@ package udemy.java_programming_masterclass.section5.exercise16;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println(FirstLastDigitSum.sumFirstAndLastDigit(123));
+        System.out.println(FirstLastDigitSum.sumFirstAndLastDigit(5));
     }
 }

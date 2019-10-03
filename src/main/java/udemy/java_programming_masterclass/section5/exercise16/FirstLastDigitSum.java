@@ -13,14 +13,10 @@ public class FirstLastDigitSum {
             return firstDigit * 2;
         }
 
-        while (firstDigit / 10 > 0) { // nie działa!
-            firstDigit = number / 10;
-
+        while ((firstDigit / 10) != 0) { // działa! :)
+            firstDigit = firstDigit / 10;
         }
 
-
-
         return firstDigit + lastDigit;
-
     }
 }
