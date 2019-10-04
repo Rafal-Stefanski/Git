@@ -5,26 +5,14 @@ public class GreatestCommonDivisor {
         if (first < 10 || second < 10) {
             return -1;
         }
-        int divider;
-        int firstCheck;
-        int secondCheck;
-        if (first <= second) {
-            firstCheck = first;
-            secondCheck = second;
-        } else {
-            firstCheck = second;
-            secondCheck = first;
-        }
+        int divider = first;
 
-        divider = firstCheck;
-        if (firstCheck % divider != 0) {
-            divider --;
-        }
-        if (secondCheck % divider != 0) {
+        while (second % divider != 0 || first % divider != 0) {
             divider--;
-        } else {
-            return divider;
+            while (second % divider == 0 && first % divider == 0) {
+                return divider;
+            }
         }
-        return divider;
+        return -1;
     }
 }
