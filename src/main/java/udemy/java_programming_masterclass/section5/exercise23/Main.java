@@ -5,7 +5,8 @@ public class Main {
 
 
         System.out.println("\nReversed number test");
-        System.out.println("is -> "+ reverse(1041));
+//        System.out.println("is -> "+ reverse(1041));
+        System.out.println("is -> "+ NumberToWords.reversed(123456789));
 
     }
     public static int reverse(int number) {
