@@ -1,16 +1,13 @@
 package udemy.java_programming_masterclass.section5.exercise23;
 
-public class NumberToWords {
-//    public static String numberToWords(int number) {
-//        if (number < 0) {
-//            System.out.println("Invalid Value");
-//        }
-//
-//        for (int i = )
-//
-//        return number;
-//    }
+public class Main {
+    public static void main(String[] args) {
 
+
+        System.out.println("\nReversed number test");
+        System.out.println("is -> "+ reverse(1041));
+
+    }
     public static int reverse(int number) {
         int reveresedNumber = 0;
         while (number != 0) {
@@ -20,5 +17,4 @@ public class NumberToWords {
         }
         return reveresedNumber;
     }
-
 }
