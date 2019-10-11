@@ -6,13 +6,11 @@ public class FlourPacker {
             return false;
         }
 
-        while (bigCount * 5 + smallCount <= goal) {
-            if (bigCount * 5 <= goal) {
+        if (smallCount >= goal % 5) {
+            if (bigCount * 5 + smallCount >= goal) {
                 return true;
             }
-            return false;
         }
-
-        return true;
+        return false;
     }
 }
