@@ -1,8 +1,8 @@
 package udemy.java_programming_masterclass.section6.exercise29;
 
 public class SimpleCalculator {
-    double firstNumber;
-    double secondNumber;
+    private double firstNumber;
+    private double secondNumber;
 
     public double getFirstNumber() {
         return this.firstNumber;
@@ -24,7 +24,7 @@ public class SimpleCalculator {
         return firstNumber + secondNumber;
     }
 
-    public double getSubstractionResult() {
+    public double getSubtractionResult() {
         return firstNumber - secondNumber;
     }
 
@@ -40,7 +40,4 @@ public class SimpleCalculator {
             return 0;
         }
     }
-
-
-
 }
