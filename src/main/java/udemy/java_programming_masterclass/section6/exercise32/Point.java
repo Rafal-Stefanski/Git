@@ -6,13 +6,12 @@ public class Point {
 
     //  Empty constructor
     public Point() {
-        this.x = 0;
-        this.y = 0;
+//        this(0, 0);
     }
 
     public Point(int x, int y) {
-        this.x = x;
-        this.y = y;
+        this.setX(x);
+        this.setY(y);
     }
 
     public int getX() {
@@ -35,6 +34,9 @@ public class Point {
     public double distance() {
         return Math.sqrt(x * x + y * y);
     }
+    // lub:
+//            return distance(0,0);
+
 
     // distance between two points
     public double distance(int x, int y) {
