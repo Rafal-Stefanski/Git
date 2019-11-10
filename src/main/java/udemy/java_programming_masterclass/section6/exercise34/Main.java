@@ -15,3 +15,4 @@ public class Main {
         System.out.println("number.imaginary= " + number.getImaginary());
     }
 }
+
