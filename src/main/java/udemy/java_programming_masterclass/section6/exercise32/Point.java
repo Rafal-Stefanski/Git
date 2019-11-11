@@ -40,7 +40,7 @@ public class Point {
 
     // distance between two points
     public double distance(int x, int y) {
-        return Math.sqrt((getX()-x)*(getX()-x)+(getY()-y)*(getY()-y));
+        return Math.sqrt((getX() - x) * (getX() - x) + (getY() - y) * (getY() - y));
     }
 
     // distance between points
