@@ -11,7 +11,5 @@ public class Main {
 
         PC thePC = new PC(theCase, theMonitor, theMotherboard);
         thePC.powerUp();
-
-
     }
 }
