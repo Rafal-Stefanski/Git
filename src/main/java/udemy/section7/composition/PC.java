@@ -20,4 +20,5 @@ public class PC {
         // Fancy graphic
         monitor.drawPixelAt(1200,50,"yellow");
     }
+
 }
