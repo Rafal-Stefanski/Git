@@ -1,4 +1,4 @@
-package udemy.section7.composition;
+package udemy.java_programming_masterclass.section7.composition;
 
 public class Resolution {
     private int width;
