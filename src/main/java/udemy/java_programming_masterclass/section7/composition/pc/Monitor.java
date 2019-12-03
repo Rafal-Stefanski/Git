@@ -1,4 +1,6 @@
-package udemy.java_programming_masterclass.section7.composition;
+package udemy.java_programming_masterclass.section7.composition.pc;
+
+import udemy.java_programming_masterclass.section7.composition.pc.Resolution;
 
 public class Monitor {
     private String model;

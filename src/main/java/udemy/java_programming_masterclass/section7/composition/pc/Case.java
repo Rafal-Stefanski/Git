@@ -1,4 +1,4 @@
-package udemy.java_programming_masterclass.section7.composition;
+package udemy.java_programming_masterclass.section7.composition.pc;
 
 public class Case {
     private String model;
