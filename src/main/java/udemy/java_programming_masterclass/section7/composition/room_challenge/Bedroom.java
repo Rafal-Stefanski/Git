@@ -1,4 +1,4 @@
-package udemy.java_programming_masterclass.section7.composition.room_chellange;
+package udemy.java_programming_masterclass.section7.composition.room_challenge;
 
 public class Bedroom {
     private String name;
