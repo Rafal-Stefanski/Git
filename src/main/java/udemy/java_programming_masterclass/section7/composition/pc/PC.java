@@ -1,4 +1,4 @@
-package udemy.section7.composition;
+package udemy.java_programming_masterclass.section7.composition.pc;
 
 public class PC {
     private Case theCase;
@@ -21,4 +21,15 @@ public class PC {
         monitor.drawPixelAt(1200,50,"yellow");
     }
 
+    public Case getTheCase() {
+        return theCase;
+    }
+
+    public Monitor getMonitor() {
+        return monitor;
+    }
+
+    public Motherboard getMotherboard() {
+        return motherboard;
+    }
 }

@@ -1,4 +1,4 @@
-package udemy.section7.composition;
+package udemy.java_programming_masterclass.section7.composition.pc;
 
 public class Main {
     public static void main(String[] args) {
@@ -7,9 +7,14 @@ public class Main {
 
         Monitor theMonitor = new Monitor("27 Beast", "Acer", 27, new Resolution(2540, 1440));
 
-        Motherboard theMotherboard = new Motherboard("BJ-200", "Asus", 4, "v2.44");
+        Motherboard theMotherboard = new Motherboard("BJ-200", "Asus", 4, 6, "v2.44");
 
         PC thePC = new PC(theCase, theMonitor, theMotherboard);
+
+        thePC.getMonitor().drawPixelAt(1500, 1200, "red");
+        thePC.getMotherboard().loadProgram("Windows");
+        thePC.getTheCase().pressPowerButton();
+
         thePC.powerUp();
     }
 }
