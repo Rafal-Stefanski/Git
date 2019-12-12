@@ -1,4 +1,4 @@
-package udemy.udemy_java_courses.overriding;
+package udemy.short_java_courses.overriding;
 
 import javax.swing.*;
 import java.awt.*;

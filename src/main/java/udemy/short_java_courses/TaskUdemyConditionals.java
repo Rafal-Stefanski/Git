@@ -1,4 +1,4 @@
-package udemy.udemy_java_courses;
+package udemy.short_java_courses;
 
 public class TaskUdemyConditionals {
     public static void main(String[] args) {
