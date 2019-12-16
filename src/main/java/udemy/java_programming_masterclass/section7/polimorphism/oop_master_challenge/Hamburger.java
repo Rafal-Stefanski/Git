@@ -84,12 +84,20 @@ public class Hamburger {
             return this.addition1 + ", priced: " + this.addition1Price + " PLN.";
         }
         if (this.addition3 == null) {
-            return this.addition1 + ", priced: " + this.addition1Price + " PLN" + "\n" + this.addition2 + ", priced: " + this.addition2Price + " PLN";
+            return this.addition1 + ", priced: " + this.addition1Price + " PLN" + "\n" +
+                    this.addition2 + ", priced: " + this.addition2Price + " PLN";
         }
         if (this.addition4 == null) {
-            return this.addition1 + ", " + this.addition2 + " and " + this.addition3 + ".";
+            return this.addition1 + ", priced: " + this.addition1Price + " PLN" + "\n" +
+                    this.addition2 + ", priced: " + this.addition2Price + " PLN" + "\n" +
+                    this.addition3 + ", priced: " + this.addition3Price + " PLN";
+
         } else {
-            return this.addition1 + ", " + this.addition2 + ", " + this.addition3 + " and " + this.addition4 + ".";
+            return this.addition1 + ", priced: " + this.addition1Price + " PLN" + "\n" +
+                    this.addition2 + ", priced: " + this.addition2Price + " PLN" + "\n" +
+                    this.addition3 + ", priced: " + this.addition3Price + " PLN" + "\n" +
+                    this.addition4 + ", priced: " + this.addition4Price + " PLN";
+
         }
     }
 
@@ -105,25 +113,25 @@ class HealthyBurger extends Hamburger {
         super(name, breadRollType, meat, price);
     }
 
-    @Override
-    public void setAddition1(String addition1, double addition1Price) {
-        super.setAddition1(addition1, addition1Price);
-    }
-
-    @Override
-    public void setAddition2(String addition2, double addition2Price) {
-        super.setAddition2(addition2, addition2Price);
-    }
-
-    @Override
-    public void setAddition3(String addition3, double addition3Price) {
-        super.setAddition2(addition3, addition3Price);
-    }
-
-    @Override
-    public void setAddition4(String addition4, double addition4Price) {
-        super.setAddition4(addition4, addition4Price);
-    }
+//    @Override
+//    public void setAddition1(String addition1, double addition1Price) {
+//        super.setAddition1(addition1, addition1Price);
+//    }
+//
+//    @Override
+//    public void setAddition2(String addition2, double addition2Price) {
+//        super.setAddition2(addition2, addition2Price);
+//    }
+//
+//    @Override
+//    public void setAddition3(String addition3, double addition3Price) {
+//        super.setAddition2(addition3, addition3Price);
+//    }
+//
+//    @Override
+//    public void setAddition4(String addition4, double addition4Price) {
+//        super.setAddition4(addition4, addition4Price);
+//    }
 
     public void setAddition5(String addition5, double addition5Price) {
         this.addition5 = addition5;
@@ -135,47 +143,62 @@ class HealthyBurger extends Hamburger {
         this.addition6Price = addition6Price;
     }
 
-    @Override
-    public String getName() {
-        return super.getName();
-    }
-
-    @Override
-    public String getBreadRollType() {
-        return super.getBreadRollType();
-    }
-
-    @Override
-    public String getMeat() {
-        return super.getMeat();
-    }
-
-    @Override
-    public double getPrice() {
-        return super.getPrice();
-    }
+//    @Override
+//    public String getName() {
+//        return super.getName();
+//    }
+//
+//    @Override
+//    public String getBreadRollType() {
+//        return super.getBreadRollType();
+//    }
+//
+//    @Override
+//    public String getMeat() {
+//        return super.getMeat();
+//    }
+//
+//    @Override
+//    public double getPrice() {
+//        return super.getPrice();
+//    }
 
     @Override
     public double getPriceWithAdditions() {
-        return super.getPriceWithAdditions();
+        double healthyBurgerAdditionsPrice = super.getPriceWithAdditions();
+        if (this.addition5 != null) {
+            healthyBurgerAdditionsPrice += this.addition5Price;
+        }
+        if (this.addition6 != null) {
+            healthyBurgerAdditionsPrice += this.addition6Price;
+        }
+        return healthyBurgerAdditionsPrice;
     }
 
     @Override
     public String getNameOfAdditions() {
-        return super.getNameOfAdditions();
+        if (this.addition5 == null) {
+            return super.getNameOfAdditions();
+        }
+        if (this.addition6 == null) {
+            return super.getNameOfAdditions() + "\n" +
+                    this.addition5 + ", priced: " + this.addition5Price + " PLN";
+        } else {
+            return super.getNameOfAdditions() + "\n" +
+                    this.addition5 + ", priced: " + this.addition5Price + " PLN" + "\n" +
+                    this.addition6 + ", priced: " + this.addition6Price + " PLN";
+        }
     }
 }
 
-//class BaseBurger extends Hamburger {
-//    public BaseBurger(double price, int lettuce, int tomato, int carrot, int pickle) {
-//        super("Base Burger Classic", "Regular white bread", "ground veal", price);
-//        super.setLettuce(lettuce);
-//        super.setTomato(tomato);
-//        super.setCarrot(carrot);
-//        super.setPickle(pickle);
-//    }
-//}
+class DeluxeBurger extends Hamburger {
+    public DeluxeBurger(String name, String breadRollType, String meat, double price) {
+        super(name, breadRollType, meat, price);
+    }
 
+
+
+}
 
 
 

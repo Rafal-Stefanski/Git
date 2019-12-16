@@ -3,15 +3,28 @@ package udemy.java_programming_masterclass.section7.polimorphism.oop_master_chal
 public class Main {
     public static void main(String[] args) {
         // check code
-        Hamburger classicBurger = new Hamburger("'Classic Base Burger'", "Regular white bread", "ground veal", 4.5);
+        Hamburger classicBurger = new Hamburger("'Classic Base Burger'", "'regular white bread'", "'ground veal'", 4.5);
         classicBurger.setAddition1("lettuce", 0.5);
         classicBurger.setAddition2("tomato", 0.89);
-        System.out.println("=== Welcome to Bill's Burger ===\n\n" +
-                "This is " + classicBurger.getName() + ", priced " + classicBurger.getPrice() + " PLN \nwith:\n" + classicBurger.getNameOfAdditions() + "\n" +
-                "Total price : " + classicBurger.getPriceWithAdditions() + " PLN, with all additions.");
-        System.out.println("");
-        HealthyBurger healthyBurger = new HealthyBurger("Healthy burger", "Brown rye bread roll", "ground veal", 5.8);
-
+       
+        System.out.println("=== Welcome to Bill's Burger ===\n");
+       
+        System.out.println("This is " + classicBurger.getName() + ", priced " + classicBurger.getPrice() + " PLN\nin "+
+                classicBurger.getBreadRollType() + ", and " + classicBurger.getMeat() +",\nwith:\n" + classicBurger.getNameOfAdditions() + "\n" +
+                "Total price: " + classicBurger.getPriceWithAdditions() + " PLN, with all additions.");
+       
+        System.out.println("   ---   ---   ---");
+       
+        HealthyBurger healthyBurger = new HealthyBurger("'Healthy Burger'", "'Brown rye bread roll'", "'ground pork'", 5.8);
+        healthyBurger.setAddition1("cheese", 1.2);
+        healthyBurger.setAddition2("garlic", 0.45);
+        healthyBurger.setAddition3("pickle", 0.4);
+        healthyBurger.setAddition4("salad", 0.3);
+        healthyBurger.setAddition5("olives", 0.75);
+        healthyBurger.setAddition6("souse", 0.2);
+        System.out.println("This is " + healthyBurger.getName() + ", priced " + healthyBurger.getPrice() + " PLN\nin "+
+                healthyBurger.getBreadRollType() + ", and " + healthyBurger.getMeat() +",\nwith:\n" + healthyBurger.getNameOfAdditions() + "\n" +
+                "Total price: " + healthyBurger.getPriceWithAdditions() + " PLN, with all additions.");
     }
 }
 
