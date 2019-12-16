@@ -3,6 +3,15 @@ package udemy.java_programming_masterclass.section7.polimorphism.oop_master_chal
 public class Main {
     public static void main(String[] args) {
         // check code
+        Hamburger classicBurger = new Hamburger("'Classic Base Burger'", "Regular white bread", "ground veal", 4.5);
+        classicBurger.setAddition1("lettuce", 0.5);
+        classicBurger.setAddition2("tomato", 0.89);
+        System.out.println("=== Welcome to Bill's Burger ===\n\n" +
+                "This is " + classicBurger.getName() + ", priced " + classicBurger.getPrice() + " PLN \nwith:\n" + classicBurger.getNameOfAdditions() + "\n" +
+                "Total price : " + classicBurger.getPriceWithAdditions() + " PLN, with all additions.");
+        System.out.println("");
+        HealthyBurger healthyBurger = new HealthyBurger("Healthy burger", "Brown rye bread roll", "ground veal", 5.8);
+
     }
 }
 
