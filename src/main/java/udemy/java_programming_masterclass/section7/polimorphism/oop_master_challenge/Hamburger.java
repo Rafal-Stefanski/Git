@@ -113,26 +113,6 @@ class HealthyBurger extends Hamburger {
         super(name, breadRollType, meat, price);
     }
 
-//    @Override
-//    public void setAddition1(String addition1, double addition1Price) {
-//        super.setAddition1(addition1, addition1Price);
-//    }
-//
-//    @Override
-//    public void setAddition2(String addition2, double addition2Price) {
-//        super.setAddition2(addition2, addition2Price);
-//    }
-//
-//    @Override
-//    public void setAddition3(String addition3, double addition3Price) {
-//        super.setAddition2(addition3, addition3Price);
-//    }
-//
-//    @Override
-//    public void setAddition4(String addition4, double addition4Price) {
-//        super.setAddition4(addition4, addition4Price);
-//    }
-
     public void setAddition5(String addition5, double addition5Price) {
         this.addition5 = addition5;
         this.addition5Price = addition5Price;
@@ -142,26 +122,6 @@ class HealthyBurger extends Hamburger {
         this.addition6 = addition6;
         this.addition6Price = addition6Price;
     }
-
-//    @Override
-//    public String getName() {
-//        return super.getName();
-//    }
-//
-//    @Override
-//    public String getBreadRollType() {
-//        return super.getBreadRollType();
-//    }
-//
-//    @Override
-//    public String getMeat() {
-//        return super.getMeat();
-//    }
-//
-//    @Override
-//    public double getPrice() {
-//        return super.getPrice();
-//    }
 
     @Override
     public double getPriceWithAdditions() {
@@ -194,10 +154,21 @@ class HealthyBurger extends Hamburger {
 class DeluxeBurger extends Hamburger {
     public DeluxeBurger(String name, String breadRollType, String meat, double price) {
         super(name, breadRollType, meat, price);
+        super.setAddition1("Chips", 3.0);
+        super.setAddition2("Coca-Cola", 4.5);
+
     }
 
 
+    @Override
+    public void setAddition3(String addition3, double addition3Price) {
+        super.setAddition3(null, 0.0);
+    }
 
+    @Override
+    public void setAddition4(String addition4, double addition4Price) {
+        super.setAddition4(null, 0.0);
+    }
 }
 
 
