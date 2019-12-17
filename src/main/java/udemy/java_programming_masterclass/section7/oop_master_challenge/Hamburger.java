@@ -1,6 +1,4 @@
-package udemy.java_programming_masterclass.section7.polimorphism.oop_master_challenge;
-
-import com.sun.org.apache.xpath.internal.objects.XNull;
+package udemy.java_programming_masterclass.section7.oop_master_challenge;
 
 public class Hamburger {
     private String name;

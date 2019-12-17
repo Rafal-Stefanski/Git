@@ -1,4 +1,4 @@
-package udemy.java_programming_masterclass.section7.polimorphism.oop_master_challenge;
+package udemy.java_programming_masterclass.section7.oop_master_challenge;
 
 public class Main {
     public static void main(String[] args) {
