@@ -1,0 +1,50 @@
+package udemy.java_programming_masterclass.section8.challenge;
+
+import java.util.Scanner;
+
+public class ArrayChallenge {
+    public static void main(String[] args) {
+        int[] myIntegers = getIntegers(3);
+        printArray(myIntegers);
+        sortIntegers(myIntegers);
+        printArray(myIntegers);
+    }
+
+    public static Scanner scanner = new Scanner(System.in);
+
+    // getIntegers
+    public static int[] getIntegers(int number) {
+        System.out.println("Enter " + number + " integer value: \r");
+        int[] values = new int[number];
+
+        for (int i = 0; i < values.length; i++) {
+            values[i] = scanner.nextInt();
+        }
+        return values;
+    }
+
+    // printArray
+    public static void printArray(int[] array) {
+        for (int i = 0; i < array.length; i++) {
+            System.out.print("[" + i + "] " + array[i] + ", ");
+        }
+    }
+
+    // sortIntegers
+    public static int[] sortIntegers(int[] array) {
+        int[] sortArray = array;
+        int num1;
+        int num2;
+        for (int i = 0; i < sortArray.length; i++) {
+            for (int j = 0; j < sortArray.length; j++) {
+                if (sortArray[i] > sortArray[j]) {
+                    num1 = sortArray[i];
+                    num2 = sortArray[j];
+                    sortArray[i] = num2;
+                    sortArray[j] = num1;
+                }
+            }
+        }
+        return sortArray;
+    }
+}

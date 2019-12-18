@@ -2,7 +2,7 @@ package udemy.java_programming_masterclass.section8;
 
 import java.util.Scanner;
 
-public class Main {
+public class SortingArray {
     private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
