@@ -15,10 +15,25 @@ public class TestExamples {
 //        double[] myDoubleArray = new double[10];
 //        System.out.println(myIntArray[5]);
 
+        System.out.println("\nSome my practice");
+        int[] someArray = new int[4];
+        someArray[2] = 50;
+        someArray[0] = 1;
+        System.out.println(someArray[2]);
+        double[] someDoubleArray = new double[5];
+
+        for (int i = 0; i < someDoubleArray.length; i++) {
+            someDoubleArray[i] = (i + 1) * Math.PI;
+        }
+
+        for (int i = 0; i < someDoubleArray.length; i++) {
+            System.out.println(i + " " +  someDoubleArray[i]);
+        }
+
     }
 
     public static void printArray(int[] array) {
-            for (int i = 0; i < array.length; i++) {
+        for (int i = 0; i < array.length; i++) {
             System.out.println("Element " + i + ", value is " + array[i]);
         }
     }
