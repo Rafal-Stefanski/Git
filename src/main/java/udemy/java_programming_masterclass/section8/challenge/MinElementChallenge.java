@@ -6,35 +6,43 @@ public class MinElementChallenge {
     private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        int[] myIntegers = {1, 2, 3};
-        findMin(myIntegers);
+        System.out.println("Enter count:");
+        int count = scanner.nextInt();
+        scanner.nextLine();
+
+        int[] returnedArray = readIntegers(count);
+        int returnedMin = findMin(returnedArray);
+
+        System.out.println("min = " + returnedMin);
+
     }
 
     public static int[] readIntegers(int count) {
-        System.out.println("Enter " + count + " integer values: \r");
-        int[] values = new int[count];
-        for (int i = 1; i < values.length; i++) {
-            values[i] = scanner.nextInt();
+
+        int[] array = new int[count];
+
+        for (int i = 0; i < array.length; i++) {
+            System.out.println("Enter number:");
+            int number = scanner.nextInt();
+            scanner.nextLine();
+            array[i] = number;
         }
-        return values;
+        return array;
     }
 
-    public static void findMin(int[] array) {
-        int num1 = 0;
-        int num2;
+    public static int findMin(int[] array) {
+        int min = Integer.MAX_VALUE;
+
         for (int i = 0; i < array.length; i++) {
-            for (int j = 0; j < array.length; j++) {
-                if (array[i] > array[j]) {
-                    num1 = array[i];
-                    num2 = array[j];
-                    array[i] = num2;
-                    array[j] = num1;
-                }
+            int value = array[i];
+
+            if (value < min) {
+                min = value;
             }
         }
-        System.out.println("minimum value is: " + num1);
-    }
 
+        return min;
+    }
 }
 
 /*
@@ -48,8 +56,7 @@ public class MinElementChallenge {
 Tips:
 	-Assume that the user will only enter numbers, never letters
 	-For simplicity, create a Scanner as a static field to help with data input
-	-Create a new console project with the name eMinElementChallengef
-
+	-Create a new console project with the name "MinElementChallenge"
 */
 
 
