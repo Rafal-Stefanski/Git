@@ -3,8 +3,7 @@ package udemy.java_programming_masterclass.section8.arrayLists;
 import java.util.ArrayList;
 
 public class GroceryList {
-    private int[] myNumbers = new int[50];
-
+    //    private int[] myNumbers = new int[50];
     private ArrayList<String> groceryList = new ArrayList<String>();
 
     public void addGroceryItem(String item) {
@@ -31,6 +30,7 @@ public class GroceryList {
 
     public String findItems(String searchItem) {
 //        boolean exist = groceryList.contains(searchItem);
+
         int position = groceryList.indexOf(searchItem);
         if (position >= 0) {
             return groceryList.get(position);
