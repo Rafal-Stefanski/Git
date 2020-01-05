@@ -42,13 +42,14 @@ public class Main {
     }
 
     public static void printInstructions() {
-        System.out.println("0 - To print choice;");
-        System.out.println("1 - To print the list of groceries;");
-        System.out.println("2 - To add an item do groceries;");
-        System.out.println("3 - To modify an item in the list of groceries;");
-        System.out.println("4 - To remove an item from the groceries list;");
-        System.out.println("5 - To search for an item in the groceries list;");
-        System.out.println("6 - To quit the application.");
+        System.out.println("\nPress ");
+        System.out.println("\t0 - To print choice;");
+        System.out.println("\t1 - To print the list of groceries;");
+        System.out.println("\t2 - To add an item do groceries;");
+        System.out.println("\t3 - To modify an item in the list of groceries;");
+        System.out.println("\t4 - To remove an item from the groceries list;");
+        System.out.println("\t5 - To search for an item in the groceries list;");
+        System.out.println("\t6 - To quit the application.");
     }
 
     public static void addItem() {
