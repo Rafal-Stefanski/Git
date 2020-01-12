@@ -1,7 +1,9 @@
-package udemy.java_programming_masterclass.section8.arrayList_challenge;
+package udemy.java_programming_masterclass.section8.challenge_arrayList;
 
-public class main {
+public class Main {
+    public static void main(String[] args) {
 
+    }
 }
 
 // Create a program that implements a simple mobile phone with the following capabilities.
