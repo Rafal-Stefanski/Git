@@ -2,13 +2,11 @@ package udemy.java_programming_masterclass.section8.challenge_arrayList;
 
 import java.util.ArrayList;
 
-public class Contacts {
+public class Contact {
     private String name;
     private int phoneNumber;
 
-    private ArrayList<String> contacts = new ArrayList<String>();
-
-    public Contacts(String name, int phoneNumber) {
+    public Contact(String name, int phoneNumber) {
         this.name = name;
         this.phoneNumber = phoneNumber;
     }
@@ -21,9 +19,8 @@ public class Contacts {
         return phoneNumber;
     }
 
-    public static Contacts addContact(String name, int phoneNumber) {
-        return new Contacts(name, phoneNumber);
+    public static Contact createContact(String name, int phoneNumber) {
+        return new Contact(name, phoneNumber);
     }
-
 
 }
