@@ -1,7 +1,5 @@
 package udemy.java_programming_masterclass.section4;
 
-import udemy.udemy_java_courses.game.Player;
-
 public class CodeBlocksAndControlStatements {
     public static void main(String[] args) {
 

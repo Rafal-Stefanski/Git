@@ -1,4 +1,4 @@
-package udemy.udemy_java_courses.game;
+package udemy.short_java_courses.game;
 
 public abstract class GameObject {
     private int x;

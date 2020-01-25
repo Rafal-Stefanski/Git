@@ -1,4 +1,4 @@
-package udemy.udemy_java_courses;
+package udemy.short_java_courses;
 
 import pl.sda.drzewo_genealogiczne.Person;
 

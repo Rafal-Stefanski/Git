@@ -1,4 +1,4 @@
-package udemy.udemy_java_courses.game;
+package udemy.short_java_courses.game;
 
 public class Player extends GameObject {
     @Override
