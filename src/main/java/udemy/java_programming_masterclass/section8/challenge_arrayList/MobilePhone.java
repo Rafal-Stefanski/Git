@@ -8,7 +8,7 @@ public class MobilePhone {
 
     public MobilePhone(String myNumber) {
         this.myNumber = myNumber;
-        this.myContacts = new ArrayList<>();
+        this.myContacts = new ArrayList<Contact>();
     }
 
     public boolean addNewContact(Contact contact) {
