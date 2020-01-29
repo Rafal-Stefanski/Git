@@ -20,10 +20,6 @@ public class MobilePhone {
         return true;
     }
 
-    private int findContact(Contact contact) {
-        return this.myContacts.indexOf(contact);
-    }
-
     public boolean updateContact(Contact oldContact, Contact newContact) {
         int foundPosition = findContact(oldContact);
         if (foundPosition < 0) {
@@ -34,6 +30,10 @@ public class MobilePhone {
         this.myContacts.set(foundPosition, newContact);
         System.out.println(oldContact.getName() + ", was replaced with " + newContact.getName());
         return true;
+    }
+
+    private int findContact(Contact contact) {
+        return this.myContacts.indexOf(contact);
     }
 
     public boolean removeContact(Contact contact) {
@@ -62,5 +62,22 @@ public class MobilePhone {
             return contact.getName();
         }
         return null;
+    }
+
+    public Contact queryContact(String name) {
+        int position = findContact(name);
+        if (position >= 0) {
+            return this.myContacts.get(position);
+        }
+        return null;
+    }
+
+    public void printContacts() {
+        System.out.println("Contact list");
+        for (int i = 0; i < this.myContacts.size(); i++) {
+            System.out.println((i+1) + ". " +
+                    this.myContacts.get(i).getName()+ " -> " +
+                    this.myContacts.get(i).getPhoneNumber());
+        }
     }
 }
