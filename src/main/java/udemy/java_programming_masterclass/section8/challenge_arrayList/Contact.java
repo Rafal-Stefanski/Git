@@ -1,7 +1,5 @@
 package udemy.java_programming_masterclass.section8.challenge_arrayList;
 
-import java.util.ArrayList;
-
 public class Contact {
     private String name;
     private String phoneNumber;

@@ -1,7 +1,5 @@
 package udemy.java_programming_masterclass.section8.challenge_arrayList;
 
-import javafx.scene.transform.Scale;
-
 import java.util.Scanner;
 
 public class Main {
@@ -19,7 +17,7 @@ public class Main {
 
             switch (action) {
                 case 0:
-                    System.out.println("/nShutting down...");
+                    System.out.println("Shutting down...");
                     quit = true;
                     break;
 
@@ -116,9 +114,9 @@ public class Main {
     private static void printActions() {
         System.out.println("\nAvailable actions:\npress");
         System.out.println("0 - to shutdown\n" +
-                "1 - to shutdown\n" +
+                "1 - to print contacts\n" +
                 "2 - to add a new contact\n" +
-                "3 - to update existing an existing contact\n" +
+                "3 - to update an existing contact\n" +
                 "4 - to remove an existing contact\n" +
                 "5 - query if an existing contact exist\n" +
                 "6 - to print a list of available actions.");
