@@ -1,4 +1,4 @@
-package udemy.java_programming_masterclass.section8.challenge;
+package udemy.java_programming_masterclass.section8.challenge_array;
 
 import java.util.Arrays;
 
