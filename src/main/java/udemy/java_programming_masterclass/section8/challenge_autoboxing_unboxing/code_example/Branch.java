@@ -1,4 +1,4 @@
-package udemy.java_programming_masterclass.section8.challenge_autoboxing_unboxing;
+package udemy.java_programming_masterclass.section8.challenge_autoboxing_unboxing.code_example;
 
 import java.util.ArrayList;
 
@@ -59,10 +59,6 @@ public class Branch {
         }
     }
 
-
-    // poniżej uzupełnione.
-
-
     public void printCustomers() {
         for (int i = 0; i < customersArrayList.size(); i++) {
             System.out.println((i + 1) + ", " + customersArrayList.get(i).getName());
@@ -74,7 +70,7 @@ public class Branch {
         if (customer != null) {
             customer.printTransactionsArrayList();
         } else {
-            System.out.println(customerName + " does not exist in record.");
+            System.out.println(customerName + " does not exist in records.");
         }
     }
 }

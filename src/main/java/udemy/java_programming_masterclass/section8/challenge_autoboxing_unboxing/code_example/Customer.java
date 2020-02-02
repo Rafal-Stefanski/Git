@@ -1,4 +1,4 @@
-package udemy.java_programming_masterclass.section8.challenge_autoboxing_unboxing;
+package udemy.java_programming_masterclass.section8.challenge_autoboxing_unboxing.code_example;
 
 import java.util.ArrayList;
 

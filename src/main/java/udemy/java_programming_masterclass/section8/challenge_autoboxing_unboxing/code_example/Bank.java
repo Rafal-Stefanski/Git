@@ -1,37 +1,29 @@
-package udemy.java_programming_masterclass.section8.challenge_autoboxing_unboxing;
+package udemy.java_programming_masterclass.section8.challenge_autoboxing_unboxing.code_example;
 
 import java.util.ArrayList;
 
 public class Bank {
-    ArrayList<Branch> branchesArray = new ArrayList<Branch>();
+    private String bankName;
+    private ArrayList<Branch> branchesArray;
 
-}
-
-/*
-* import java.util.ArrayList;
-
-public class Bank {
-    private String name;
-    private ArrayList<Branch> branches;
-
-    public Bank(String name) {
-        this.name = name;
-        this.branches = new ArrayList<>();
+    public Bank(String bankName) {
+        this.bankName = bankName;
+        this.branchesArray = new ArrayList<>();
     }
 
     private boolean findBranch(Branch branch) {
-        if (branches.indexOf(branch) >= 0) {
-            System.out.println(branch.getName() + " already exist in record.");
+        if (branchesArray.indexOf(branch) >= 0) {
+            System.out.println(branch.getName() + ", already exist in record.");
             return true;
         } else {
-            System.out.println(branch.getName() + " is new.");
+            System.out.println(branch.getName() + ", is new.");
             return false;
         }
     }
 
     private Branch findBranch(String name) {
-        for (int i = 0; i < branches.size(); i++) {
-            Branch branch = branches.get(i);
+        for (int i = 0; i < branchesArray.size(); i++) {
+            Branch branch = branchesArray.get(i);
             if (branch.getName().equals(name)) {
                 return branch;
             }
@@ -41,13 +33,19 @@ public class Bank {
 
     public void addNewBranch(Branch branch) {
         if (!(findBranch(branch))) {
-            branches.add(branch);
-            System.out.println(branch.getName() + " has been added");
+            branchesArray.add(branch);
+            System.out.println(branch.getName() + " has been added.");
         } else {
             System.out.println("Error, " + branch.getName() + " already exist.");
         }
-
     }
+
+
+}
+
+/*
+
+
 
     public void addNewBranchCustomer(String branchName, Customer customer) {
         Branch branch = findBranch(branchName);
