@@ -1,9 +1,5 @@
 package udemy.java_programming_masterclass.section8.challenge_autoboxing_unboxing.solution;
 
-/*
-    Niestety kod nie działa. Do przejrzenia.
- */
-
 public class Main {
     public static void main(String[] args) {
         Bank bank = new Bank("National Australia Bank");
