@@ -38,20 +38,21 @@ public class Bank {
         return false;
     }
 
-    private Branch findBranch(String customerName) {
+    private Branch findBranch(String branchName) {
         for (int i = 0; i < this.branches.size(); i++) {
             Branch checkedBranch = this.branches.get(i);
-            if (checkedBranch.getName().equals(customerName)) {
+            if (checkedBranch.getName().equals(branchName)) {
                 return checkedBranch;
             }
         }
+
         return null;
     }
 
     public boolean listCustomers(String branchName, boolean showTransactions) {
         Branch branch = findBranch(branchName);
         if (branch != null) {
-            System.out.println("Custom details for branch " + branch.getName());
+            System.out.println("Customer details for branch " + branch.getName());
 
             ArrayList<Customer> branchCustomers = branch.getCustomers();
             for (int i = 0; i < branchCustomers.size(); i++) {
@@ -60,8 +61,8 @@ public class Bank {
                 if (showTransactions) {
                     System.out.println("Transactions");
                     ArrayList<Double> transactions = branchCustomer.getTransactions();
-                    for (int j = 0; j < transactions.size(); i++) {
-                        System.out.println("[" + (j + 1) + "] Amount" + transactions.get(j));
+                    for (int j = 0; j < transactions.size(); j++) {
+                        System.out.println("[" + (j + 1) + "]  Amount " + transactions.get(j));
                     }
                 }
             }
