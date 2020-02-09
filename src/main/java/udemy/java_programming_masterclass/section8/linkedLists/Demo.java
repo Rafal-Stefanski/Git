@@ -4,7 +4,7 @@ import java.util.*;
 
 public class Demo {
     public static void main(String[] args) {
-        LinkedList<String> placesToVisit = new LinkedList<>();
+        LinkedList<String> placesToVisit = new LinkedList<String>();
         addInOrder(placesToVisit, "Sydney");
         addInOrder(placesToVisit, "Melbourne");
         addInOrder(placesToVisit, "Brisbane");
@@ -17,24 +17,7 @@ public class Demo {
         addInOrder(placesToVisit, "Alice Springs");
         addInOrder(placesToVisit, "Darwin");
         printList(placesToVisit);
-
         visit(placesToVisit);
-
-//        placesToVisit.add("Sydney");
-//        placesToVisit.add("Melbourne");
-//        placesToVisit.add("Brisbane");
-//        placesToVisit.add("Perth");
-//        placesToVisit.add("Canberra");
-//        placesToVisit.add("Adelaide");
-//        placesToVisit.add("Darwin");
-
-//        printList(placesToVisit);
-//
-//        placesToVisit.add(1, "Alice Springs");
-//        printList(placesToVisit);
-//
-//        placesToVisit.remove(4); // Perth will be removed.
-//        printList(placesToVisit);
     }
 
     private static void printList(LinkedList<String> linkedList) {
@@ -42,7 +25,7 @@ public class Demo {
         while (i.hasNext()) {
             System.out.println("Now visiting " + i.next());
         }
-        System.out.println("==========================");
+        System.out.println("=========================");
     }
 
     private static boolean addInOrder(LinkedList<String> linkedList, String newCity) {
@@ -52,11 +35,11 @@ public class Demo {
             int comparison = stringListIterator.next().compareTo(newCity);
             if (comparison == 0) {
                 // equal, do not add
-                System.out.println(newCity + "is already included as a destination");
+                System.out.println(newCity + " is already included as a destination");
                 return false;
             } else if (comparison > 0) {
                 // new City should appear before this one
-                // Brisbane -> Adelaide
+                // Brisbane  -> Adelaide
                 stringListIterator.previous();
                 stringListIterator.add(newCity);
                 return true;
@@ -64,6 +47,7 @@ public class Demo {
                 // move on next city
             }
         }
+
         stringListIterator.add(newCity);
         return true;
     }
@@ -92,7 +76,7 @@ public class Demo {
                     break;
 
                 case 1:
-                    if (goingForward) {
+                    if (!goingForward) {
                         if (listIterator.hasNext()) {
                             listIterator.next();
                         }
@@ -101,7 +85,7 @@ public class Demo {
                     if (listIterator.hasNext()) {
                         System.out.println("Now visiting " + listIterator.next());
                     } else {
-                        System.out.println("We are at the  start of the list");
+                        System.out.println("Reached the end of the list");
                         goingForward = false;
                     }
                     break;
@@ -124,7 +108,9 @@ public class Demo {
                 case 3:
                     printMenu();
                     break;
+
             }
+
         }
     }
 
