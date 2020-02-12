@@ -1,10 +1,25 @@
 package udemy.java_programming_masterclass.section8.challenge_linkedList.solution;
 
+import java.util.ArrayList;
+
 public class Main {
+
+    private static ArrayList<Album> albums = new ArrayList<Album>();
 
     public static void main(String[] args) {
         Album album = new Album("Stormbringer", "Deep Purple");
-//        album.addSong("Stormbringer", 4.6); // jakiś błąd ;-(
+        album.addSong("Stormbringer", 4.6);
+        album.addSong("Love don't mean a thing", 4.22);
+        album.addSong("Holly man", 4.3);
+        album.addSong("Hold on", 5.6);
+        album.addSong("Lady double dealer", 3.21);
+        album.addSong("You can't do it right", 6.23);
+        album.addSong("High ball shooter", 4.27);
+        album.addSong("The gipsy", 4.2);
+        album.addSong("Soldier of Fortune", 3.13);
+        albums.add(album);
+
+        album = new Album("For those about rock", "AC/DC");
     }
 
 }
