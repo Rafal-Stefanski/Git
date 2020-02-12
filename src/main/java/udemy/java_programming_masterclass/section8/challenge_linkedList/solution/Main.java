@@ -1,4 +1,4 @@
-package udemy.java_programming_masterclass.section8.challange_arrayLink.solution;
+package udemy.java_programming_masterclass.section8.challenge_linkedList.solution;
 
 public class Main {
 
