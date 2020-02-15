@@ -49,4 +49,5 @@ public class MobilePhone implements ITelephone {
     public boolean isRinging() {
         return isRinging;
     }
+
 }
