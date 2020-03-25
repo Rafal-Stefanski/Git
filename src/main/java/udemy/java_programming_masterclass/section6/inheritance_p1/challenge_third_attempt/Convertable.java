@@ -19,4 +19,15 @@ public class Convertable extends Car {
         }
     }
 
+    public void accelerate(int rate) {
+        int newSpeed = getCurrentSpeed() + rate;
+        if (newSpeed == 0) {
+            stop();
+        } else if (newSpeed > 0 && newSpeed <= 30) {
+            changeGear(1);
+        } else if (newSpeed > 30 && newSpeed < 45) {
+            changeGear(2);
+        }
+    }
+
 }
