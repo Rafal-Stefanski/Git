@@ -11,7 +11,7 @@ public class Main {
         boolean quit = false;
         startPhone();
         printActions();
-        while (quit) {
+        while (!quit) {
             System.out.println("\nEnter action: (6 to show available options)");
             int action = scanner.nextInt();
             scanner.nextLine();
@@ -32,8 +32,10 @@ public class Main {
                     break;
                 case 4:
                     removeContact();
+                    break;
                 case 5:
                     queryContact();
+                    break;
                 case 6:
                     printActions();
                     break;
