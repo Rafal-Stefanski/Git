@@ -1,6 +1,6 @@
 package udemy.java_programming_masterclass.section9.challenge_abstract;
 
-public class main {
+public class Main {
 
 }
     // For this challenge, create an abstract class to define items that can be stored in a list.
