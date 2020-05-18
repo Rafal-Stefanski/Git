@@ -1,8 +1,23 @@
 package udemy.java_programming_masterclass.section9.challenge_abstract;
 
 public class Main {
+    public static void main(String[] args) {
+        MyLinkedList list = new MyLinkedList(null);
+        list.traverse(list.getRoot());
+        // Create a string data array to avoid typing loads of addItem instructions:
+        String stringData = "Darwin Brisbane Perth Melbourne Canberra Adelaide Sydney Canberra";
+
+        String[] data = stringData.split(" ");
+        for (String s : data) {
+            list.addItem(new Node(s));
+        }
+
+        list.traverse(list.getRoot());
+    }
 
 }
+
+
     // For this challenge, create an abstract class to define items that can be stored in a list.
     // The class should contain 2 references to items which will represent the next and previous
     // items (in the case of a linked list).
