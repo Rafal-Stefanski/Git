@@ -8,6 +8,7 @@ public class generics_intro {
         items.add(1);
         items.add(2);
         items.add(3);
+//        items.add("tim");
         items.add(4);
         items.add(5);
 
