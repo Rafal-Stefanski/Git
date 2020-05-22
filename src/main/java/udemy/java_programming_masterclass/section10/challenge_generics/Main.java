@@ -2,7 +2,7 @@ package udemy.java_programming_masterclass.section10.challenge_generics;
 
 public class Main {
     public static void main(String[] args) {
-
+        // code here.
     }
 }
 
