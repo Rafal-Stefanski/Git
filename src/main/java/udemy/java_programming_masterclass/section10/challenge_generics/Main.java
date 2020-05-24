@@ -1,8 +1,10 @@
 package udemy.java_programming_masterclass.section10.challenge_generics;
 
+import udemy.java_programming_masterclass.section10.how_generics_work.Team;
+
 public class Main {
     public static void main(String[] args) {
-        // code here.
+//        League<Team<FootballPlayer>> footballLeague = new League<>("AFL");
     }
 }
 
