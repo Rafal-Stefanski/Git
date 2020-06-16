@@ -2,7 +2,7 @@ package udemy.java_programming_masterclass.section11.access_modifiers;
 
 import java.util.ArrayList;
 /**
- * Created by me 2020-06-13
+ * Created by RS on 2020-06-13
  */
 public class Account {
     private String accountName;
@@ -34,7 +34,15 @@ public class Account {
             this.balance += withdrawal;
             System.out.println(amount + " withdrawal. Balance is now " + this.balance);
         } else {
-            System.out.println();
+            System.out.println("Cannot withdraw negative sums");
         }
+    }
+
+    public void calculateBalance() {
+        this.balance = 0;
+        for (int i : this.transactions) {
+            this.balance+=i;
+        }
+        System.out.println("Calculated balance is " + this.balance);
     }
 }
