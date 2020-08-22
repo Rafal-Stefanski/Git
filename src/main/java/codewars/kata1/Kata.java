@@ -4,38 +4,28 @@ import java.util.Arrays;
 
 public class Kata {
 
-    public static String phoneNo(int[] numbers) {
-        String openBraces = "(";
-        String firstPartOfNumber;
+    public static String createPhoneNumber(int[] numbers) {
+
+//        First solution.
+
+        String phoneNumberFromArray = "(";
 
         System.out.print("(");
         for (int i = 0; i < 3; i++) {
-//            Arrays.toString.numbers[i];
+            phoneNumberFromArray += String.valueOf(numbers[i]);
         }
-        System.out.print(") ");
+        phoneNumberFromArray += ") ";
         for (int j = 3; j < 6; j++) {
-            System.out.print(numbers[j]);
+            phoneNumberFromArray += String.valueOf(numbers[j]);
         }
-        System.out.print("-");
+        phoneNumberFromArray += "-";
         for (int j = 6; j <= 9; j++) {
-            System.out.print(numbers[j]);
+            phoneNumberFromArray += String.valueOf(numbers[j]);
         }
+        return phoneNumberFromArray;
 
-        return null;
-    }
+//        Second Solution.
 
-
-    public static String createPhoneNumber(int[] numbers) {
-        // Your code here!
-//     String number = "(123) 456-7890";
-//     return number;
-//     int [] number = new int [];
-//     number = {1, 2, 3, 4, 5, 6, 7, 8, 9, 0};
-//        "(123) 456-7890"
-
-//        String phoneNumber = toString(numbers);
-
-        return null;
-
+//        return String.format("(%d%d%d) %d%d%d-%d%d%d%d",numbers[0],numbers[1],numbers[2],numbers[3],numbers[4],numbers[5],numbers[6],numbers[7],numbers[8],numbers[9]);
     }
 }
