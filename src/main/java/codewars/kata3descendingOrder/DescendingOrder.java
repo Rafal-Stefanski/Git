@@ -1,22 +1,21 @@
 package codewars.kata3descendingOrder;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class DescendingOrder {
     public static int sortDesc(final int num) {
-        //Your code
-
-        // niestety wciąż nie działa ;(
 
         if (num > 0) {
 
             int temp = num;
-            ArrayList<Integer> array = new ArrayList<Integer>();
+            ArrayList<Integer> array = new ArrayList<>();
             do{
                 array.add(temp % 10);
                 temp /= 10;
             } while  (temp > 0);
-
+            Collections.sort(array);
+            Collections.reverse(array);
             return DescendingOrder.toInt(array);
         } else {
             return 0;
@@ -35,7 +34,12 @@ public class DescendingOrder {
     }
 
     public static void main(String[] args) {
-        int number = sortDesc(123);
+        // for checkup, and it works!
+        int number = sortDesc(123456789);
+        System.out.println("987654321");
         System.out.println(number);
+        int number1 = sortDesc(145263);
+        System.out.println("654321");
+        System.out.println(number1);
     }
 }
