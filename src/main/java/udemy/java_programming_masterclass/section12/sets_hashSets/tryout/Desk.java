@@ -24,8 +24,8 @@ public class Desk {
         return feature;
     }
 
-    public boolean addStuff(Desk stuff){
-        return this.stuffOnTheDesk.add(stuff);
+    public void addStuff(Desk stuff){
+        this.stuffOnTheDesk.add(stuff);
     }
 
     public Set<Desk> getStuffOnTheDesk(){
