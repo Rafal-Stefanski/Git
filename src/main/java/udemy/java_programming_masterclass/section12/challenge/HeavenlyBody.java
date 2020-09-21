@@ -7,6 +7,7 @@ public class HeavenlyBody {
     private final  String name;
     private final double orbitalPeriod;
     private final Set<HeavenlyBody> satellites;
+    private BodyType bodyType;
 
 //    added bodyType as Enum to the constructor.
     public HeavenlyBody(String name, double orbitalPeriod, BodyType bodyType) {
@@ -53,11 +54,11 @@ public class HeavenlyBody {
         return this.name.equals(objName);
     }
 
-    @Override
-    public int hashCode() {
-        System.out.println("hashcode called");
-        return this.name.hashCode() + 57;
-    }
+//    @Override
+//    public int hashCode() {
+//        System.out.println("hashcode called");
+//        return this.name.hashCode() + 57;
+//    }
 
 
 }
