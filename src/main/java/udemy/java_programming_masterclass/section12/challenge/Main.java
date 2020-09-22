@@ -74,13 +74,13 @@ public class Main {
         solarSystem.put(temp.getName(), temp);
         planets.add(temp);
 
-        System.out.println("Planets");
+        System.out.println("\nPlanets:");
         for(HeavenlyBody planet : planets) {
             System.out.println("\t" + planet.getName());
         }
 
         HeavenlyBody body = solarSystem.get("Mars");
-        System.out.println("Moons of " + body.getName());
+        System.out.println("\nMoons of: " + body.getName());
         for(HeavenlyBody jupiterMoon: body.getSatellites()) {
             System.out.println("\t" + jupiterMoon.getName());
         }
@@ -90,14 +90,14 @@ public class Main {
             moons.addAll(planet.getSatellites());
         }
 
-        System.out.println("All Moons");
+        System.out.println("\nAll Moons:");
         for(HeavenlyBody moon : moons) {
             System.out.println("\t" + moon.getName());
         }
 
         HeavenlyBody pluto = new DwarfPlanet("Pluto", 842);
         planets.add(pluto);
-
+        System.out.println();
         for(HeavenlyBody planet : planets) {
             System.out.println(planet);
 //            System.out.println(planet.getName() + ": " + planet.getOrbitalPeriod());
@@ -109,15 +109,6 @@ public class Main {
         System.out.println(earth2.equals(earth1));
         System.out.println(earth1.equals(pluto));
         System.out.println(pluto.equals(earth1));
-
-
-
-
-
-
-
-
-
 
     }
 }
