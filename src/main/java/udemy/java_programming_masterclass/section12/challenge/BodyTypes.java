@@ -1,7 +1,9 @@
 package udemy.java_programming_masterclass.section12.challenge;
 
-public enum BodyType {
+public enum BodyTypes {
     STAR,
     PLANET,
-    MOON
+    DWARF_PLANET,
+    MOON,
+    ASTEROID
 }
