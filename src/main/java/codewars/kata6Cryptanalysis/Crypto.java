@@ -7,6 +7,8 @@ package codewars.kata6Cryptanalysis;
 public class Crypto {
     public static String wordPattern(final String word) {
 
+//        solution from https://ao.gl/cryptanalysis-word-patterns-in-java/
+
         String newWord = word.toLowerCase();
         java.util.List<Character> characterList = new java.util.ArrayList<>();
         StringBuilder result = new StringBuilder();
