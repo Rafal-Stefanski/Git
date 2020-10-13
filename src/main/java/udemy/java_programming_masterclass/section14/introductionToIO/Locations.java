@@ -6,12 +6,16 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.*;
 
+/**
+ * created 2020.10.13 by RS
+ * */
+
 public class Locations implements Map<Integer, Location> {
     private static Map<Integer, Location> locations = new HashMap<Integer, Location>();
 
     public static void main(String[] args) throws IOException {
-        try(FileWriter locFile = new FileWriter("locations.txt");
-            FileWriter dirFile = new FileWriter("directions.txt")) {
+        try(FileWriter locFile = new FileWriter("src/main/java/udemy/java_programming_masterclass/section14/introductionToIO/locations_big.txt");
+            FileWriter dirFile = new FileWriter("src/main/java/udemy/java_programming_masterclass/section14/introductionToIO/directions_big.txt")) {
             for(Location location : locations.values()) {
                 locFile.write(location.getLocationID() + "," + location.getDescription() + "\n");
                 for(String direction : location.getExits().keySet()) {
@@ -38,7 +42,7 @@ public class Locations implements Map<Integer, Location> {
 
         Scanner scanner = null;
         try {
-            scanner = new Scanner(new FileReader("locations_big.txt"));
+            scanner = new Scanner(new FileReader("src/main/java/udemy/java_programming_masterclass/section14/introductionToIO/locations_big.txt"));
             scanner.useDelimiter(",");
             while(scanner.hasNextLine()) {
                 int loc = scanner.nextInt();
@@ -59,7 +63,7 @@ public class Locations implements Map<Integer, Location> {
 
         // Now read the exits
         try {
-            scanner = new Scanner(new BufferedReader(new FileReader("directions_big.txt")));
+            scanner = new Scanner(new BufferedReader(new FileReader("src/main/java/udemy/java_programming_masterclass/section14/introductionToIO/directions_big.txt")));
             scanner.useDelimiter(",");
             while(scanner.hasNextLine()) {
 //                int loc = scanner.nextInt();
@@ -116,7 +120,6 @@ public class Locations implements Map<Integer, Location> {
 //        locations.put(5, new Location(5, "You are in the forest",tempExit));
 
     }
-
     @Override
     public int size() {
         return locations.size();
