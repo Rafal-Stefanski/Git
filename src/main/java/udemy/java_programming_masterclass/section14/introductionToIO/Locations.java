@@ -56,16 +56,15 @@ public class Locations implements Map<Integer, Location> {
         }
 
         // Now read the exits
-        try (Scanner scanner = new Scanner(new BufferedReader( new FileReader("src/main/java/udemy/java_programming_masterclass/section14/introductionToIO/directions_big.txt")))) {
-            scanner.useDelimiter(",");
-            while(scanner.hasNextLine()) {
+        try (BufferedReader dirFile = new BufferedReader( new FileReader("src/main/java/udemy/java_programming_masterclass/section14/introductionToIO/directions_big.txt"))) {
+           String input;
+            while((input = dirFile.readLine()) != null) {
 //                int loc = scanner.nextInt();
 //                scanner.skip(scanner.delimiter());
 //                String direction = scanner.next();
 //                scanner.skip(scanner.delimiter());
 //                String dest = scanner.nextLine();
 //                int destination = Integer.parseInt(dest);
-                String input = scanner.nextLine();
                 String[] data = input.split(",");
                 int loc = Integer.parseInt(data[0]);
                 String direction = data[1];
