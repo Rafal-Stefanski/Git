@@ -20,7 +20,7 @@ class Countdown {
 
     private int i;
 
-    public void doCountdown() {
+     public void doCountdown() {    // adding "synchronized" keyword, makes doCountdown method work first with one thread then with the other.
         String color;
 
         switch (Thread.currentThread().getName()) {
@@ -34,9 +34,11 @@ class Countdown {
                 color = ThreadColor.ANSI_GREEN;
         }
 
-        for (i = 10; i > 0; i--) {
-            System.out.println(color + Thread.currentThread().getName() + ": i = " + i);
+        synchronized (this) {
+            for (i = 10; i > 0; i--) {
+                System.out.println(color + Thread.currentThread().getName() + ": i = " + i);
 
+            }
         }
     }
 }
