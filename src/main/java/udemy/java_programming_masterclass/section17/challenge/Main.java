@@ -1,4 +1,4 @@
-package udemy.java_programming_masterclass.section17.challenge1;
+package udemy.java_programming_masterclass.section17.challenge;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -65,9 +65,45 @@ public class Main {
         String challenge7 = "abcd.135";
         String regExp7 = "^[A-z]+.[0-9]+$";
         System.out.println(challenge7.matches(regExp7));
-         System.out.println(challenge7.matches("^[A-z][a-z]+\\.\\d+$"));
+        System.out.println(challenge7.matches("^[A-z][a-z]+\\.\\d+$"));
 
+        // Challenge #8
+        System.out.println("\n=== Challenge #8 ===");
+        String challenge8 = "abcd.135uvqz.7tzik.999";
+//        String regExp8 = "[0-9]+";           // It works when there is no group number group()
+        String regExp8 = "[A-Za-z]+\\.(\\d+)"; // It works when there is given group number group(1)
 
+        Pattern pattern8 = Pattern.compile(regExp8);
+        Matcher matcher8 = pattern8.matcher(challenge8);
+
+        while (matcher8.find()) {
+            System.out.println("Occurrence: " + matcher8.group(1));
+        }
+
+        // Challenge #9
+        System.out.println("\n=== Challenge #9 ===");
+        String challenge9 = "abcd.135uvqz\tuvqz.7\ttzik.999\n";
+
+        String regExp9 = "[A-Za-z]+\\.(\\d+)\\s";   // added \\s to remove all empty spaces and tabs
+
+        Pattern pattern9 = Pattern.compile(regExp9);
+        Matcher matcher9 = pattern9.matcher(challenge9);
+
+        while (matcher9.find()) {
+            System.out.println("Occurrence: " + matcher9.group(1));
+        }
+
+        // Challenge #10
+        System.out.println("\n=== Challenge #10 ===");
+        String challenge10 = "abcd.135uvqz\tuvqz.7\ttzik.999\n";
+//        String regExp10 = "[A-Za-z]+\\.(\\d+\\s)";
+
+        Pattern pattern10 = Pattern.compile("[A-Za-z]+\\.(\\d+)\\s");
+        Matcher matcher10 = pattern10.matcher(challenge9);
+
+        while (matcher10.find()) {
+            System.out.println("Occurrence: start = " + matcher10.start(1) + " end = " + (matcher10.end(1) - 1));
+        }
 
     }
 
