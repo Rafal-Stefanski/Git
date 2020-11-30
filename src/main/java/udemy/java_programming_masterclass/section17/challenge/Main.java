@@ -82,7 +82,7 @@ public class Main {
 
         // Challenge #9
         System.out.println("\n=== Challenge #9 ===");
-        String challenge9 = "abcd.135uvqz\tuvqz.7\ttzik.999\n";
+        String challenge9 = "abcd.135\tuvqz.7\ttzik.999\n";
 
         String regExp9 = "[A-Za-z]+\\.(\\d+)\\s";   // added \\s to remove all empty spaces and tabs
 
@@ -95,7 +95,7 @@ public class Main {
 
         // Challenge #10
         System.out.println("\n=== Challenge #10 ===");
-        String challenge10 = "abcd.135uvqz\tuvqz.7\ttzik.999\n";
+        String challenge10 = "abcd.135\tuvqz.7\ttzik.999\n";
 //        String regExp10 = "[A-Za-z]+\\.(\\d+\\s)";
 
         Pattern pattern10 = Pattern.compile("[A-Za-z]+\\.(\\d+)\\s");
