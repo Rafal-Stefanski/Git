@@ -99,12 +99,52 @@ public class Main {
 //        String regExp10 = "[A-Za-z]+\\.(\\d+\\s)";
 
         Pattern pattern10 = Pattern.compile("[A-Za-z]+\\.(\\d+)\\s");
-        Matcher matcher10 = pattern10.matcher(challenge9);
+        Matcher matcher10 = pattern10.matcher(challenge10);
 
         while (matcher10.find()) {
             System.out.println("Occurrence: start = " + matcher10.start(1) + " end = " + (matcher10.end(1) - 1));
         }
 
-    }
+        // Challenge #11
+        System.out.println("\n=== Challenge #11 ===");
+        String challenge11 = "{0, 2}, {0, 5}, {1, 3}, {2, 4}";
 
+//        System.out.println((challenge11.replaceAll("\\{","").replaceAll("}", "")));   // Print String but leaves the ",".
+
+        Pattern pattern11 = Pattern.compile("(\\{)(.+?)(})");
+//        Pattern pattern11 = Pattern.compile("\\{(.+?)}");   // Solution from course for 1 group.
+        Matcher matcher11 = pattern11.matcher(challenge11);
+
+        while (matcher11.find()) {
+            System.out.println("Occurrence: " + matcher11.group(2));
+        }
+        System.out.println("\n=== Challenge #11a ===");
+        String challenge11a = "{0, 2}, {0, 5}, {1, 3}, {2, 4}, {x, y}, {6, 34}, {11, 12}";
+
+
+        Pattern pattern11a = Pattern.compile("\\{(\\d+, \\d+)}");   // Example that skip x, y as those are not digits.
+        Matcher matcher11a = pattern11a.matcher(challenge11a);
+
+        while (matcher11a.find()) {
+            System.out.println("Occurrence: " + matcher11a.group(1));
+        }
+
+        // Challenge #12
+        System.out.println("\n=== Challenge #12 ===");
+        String challenge12 = "11111";
+        System.out.println("Challenge12 US zip code match: " + challenge12.matches("^[0-9]{5}$"));  // In solution "^\\d{5}$".
+
+        // Challenge #13
+        System.out.println("\n=== Challenge #13 ===");
+        String challenge13 = "11111-1111";
+        System.out.println("Challenge13 US zip code match: " + challenge13.matches("^[0-9]{5}[\\-][0-9]{4}$"));  // In solution "^\\d{5}-\\d{4}$".
+
+        // Challenge #14
+        System.out.println("\n=== Challenge #14 ===");
+//        String challenge14 = "11111-1111";
+        System.out.println("Challenge12 US zip code match: " + challenge12.matches("^[0-9]{5}[\\-][0-9]{4}$|^[0-9]{5}$"));  // In solution "^\\d{5}(-\\d{4})?$".
+        System.out.println("Challenge13 US zip code match: " + challenge13.matches("^[0-9]{5}[\\-][0-9]{4}$|^[0-9]{5}$"));  // In solution "^\\d{5}(-\\d{4})?$".
+
+        
+    }
 }
