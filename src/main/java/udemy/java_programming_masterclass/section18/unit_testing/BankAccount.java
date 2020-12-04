@@ -35,5 +35,4 @@ public class BankAccount {
     }
 
 //    More methods that use firstName, lastName, and perform other functions
-
 }
