@@ -1,6 +1,6 @@
 package udemy.java_programming_masterclass.section19.DatabasesWithJDBC;
 
-import org.sqlite.core.DB;
+//import org.sqlite.core.DB;
 
 import java.sql.*;
 
