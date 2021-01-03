@@ -5,7 +5,7 @@ public class Main {
     public static void main(String[] args) {
 
 //        using external class
-//        new Thread(new CodeToRun()).start();
+        new Thread(new CodeToRun()).start();
 
 //        or
 //        using creating new instance inside the class
@@ -22,11 +22,11 @@ public class Main {
 
 //        or
 //        Lambda with many lines and curly braces
-        new Thread(()-> {
+        new Thread(() -> {
             System.out.println("Printing from the Runnable");
             System.out.println("Line 2");
             System.out.format("This is line %d\n", 3);
-            }).start();
+        }).start();
     }
 }
 
