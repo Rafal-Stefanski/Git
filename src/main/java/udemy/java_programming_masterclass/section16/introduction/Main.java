@@ -3,6 +3,7 @@ package udemy.java_programming_masterclass.section16.introduction;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 public class Main {
     public static void main(String[] args) {
@@ -24,13 +25,26 @@ public class Main {
             System.out.println(employee.getAge());
         });
 
-//        for (Employee employee : employees) {
-//            System.out.println(employee.getName());
-//            System.out.println(employee.getAge());
-//        }
+        System.out.println("\n******** playing around lambdas *************");
 
-//        System.out.println("**********************");
-//
+        AnotherClass anotherClass = new AnotherClass();
+        String s = anotherClass.doSomething();
+        System.out.println(s);
+
+
+        System.out.println("\n********** loop using for ***********");
+        for (Employee employee : employees) {
+            System.out.println(employee.getName());
+            System.out.println(employee.getAge());
+        }
+
+        System.out.println("\n********** loop using forEach and lambda ***********");
+        employees.forEach(employee -> {
+            System.out.println(employee.getName());
+            System.out.println(employee.getAge());
+        });
+
+//        System.out.println("\n**********************");
 //        for (int i = 0; i < employees.size(); i++) {
 //            Employee employee = employees.get(i);
 //            System.out.println(employee.getName());
@@ -80,6 +94,7 @@ class AnotherClass {
     public String doSomething() {
         int i = 0;
 
+        /**with Lambda*/
         UpperConcat uc = (s1, s2) -> {
             System.out.println("The lambda expression's class is " + getClass().getSimpleName());
             System.out.println("i in lambda expression = " + i);
@@ -89,6 +104,20 @@ class AnotherClass {
 
         System.out.println("The AnotherClass class's name is " + getClass().getSimpleName());
         return Main.doStringStuff(uc, "String1", "String2");
+
+
+        /**without Lambda*/
+//        System.out.println("\nThe AnotherClass class's name is: " + getClass().getSimpleName());
+//        return Main.doStringStuff(new UpperConcat() {
+//            @Override
+//            public String upperConcat(String s1, String s2) {
+//                System.out.println("The anonymous class's name is: " + getClass().getSimpleName());
+//                return s1.toUpperCase() + s2.toUpperCase();
+//            }
+//        }, "String1", "String2");
+
+//        int i = 0;
+//
 
     }
 
