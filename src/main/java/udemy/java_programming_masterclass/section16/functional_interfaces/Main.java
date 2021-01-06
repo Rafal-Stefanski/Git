@@ -2,7 +2,10 @@ package udemy.java_programming_masterclass.section16.functional_interfaces;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
+import java.util.function.IntPredicate;
 import java.util.function.Predicate;
+import java.util.function.Supplier;
 
 public class Main {
 
@@ -22,8 +25,34 @@ public class Main {
         employees.add(red);
         employees.add(charming);
 
+        /** using lambda expression */
         printEmployeesByAge(employees, "Employees over 30", employee -> employee.getAge() > 30);
-        printEmployeesByAge(employees, "\nEmployees 30 and under", employee ->employee.getAge() <= 30);
+        printEmployeesByAge(employees, "\nEmployees 30 and under", employee -> employee.getAge() <= 30);
+        /** using anonymous class
+         * new anonymous class is greyed and Intellij gives a hint to change it to lambda, but both works the same */
+        printEmployeesByAge(employees, "\nEmployess younger than 25", new Predicate<Employee>() {
+            @Override
+            public boolean test(Employee employee) {
+                return employee.getAge() < 25;
+            }
+        });
+
+        /** using Predicate from java.util.function */
+        IntPredicate greaterThan15 = i -> i > 15;
+        IntPredicate lessThan100 = i -> i < 100;
+
+        System.out.println(greaterThan15.test(10));
+        int a = 20;
+        System.out.println(greaterThan15.test(a + 5));
+
+        System.out.println(greaterThan15.and(lessThan100).test(50));
+        System.out.println(greaterThan15.and(lessThan100).test(15));
+
+        Random random = new Random();
+        Supplier<Integer> randomSupplier = () -> random.nextInt(1000);
+        for (int i = 0; i < 10; i++) {
+            System.out.println(randomSupplier.get());
+        }
 
     }
 
@@ -33,7 +62,7 @@ public class Main {
 
         System.out.println(ageText);
         System.out.println("==================");
-        for(Employee employee : employees) {
+        for (Employee employee : employees) {
             if (ageCondition.test(employee)) {
                 System.out.println(employee.getName());
             }
