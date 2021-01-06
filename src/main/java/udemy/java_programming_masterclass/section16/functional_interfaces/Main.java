@@ -3,6 +3,7 @@ package udemy.java_programming_masterclass.section16.functional_interfaces;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import java.util.function.Function;
 import java.util.function.IntPredicate;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
@@ -54,6 +55,40 @@ public class Main {
             System.out.println(randomSupplier.get());
         }
 
+        /** printing employees last names with for each */
+        System.out.println("\nLast name with with for each loop");
+
+        employees.forEach(employee -> {
+            String lasName = employee.getName().substring(employee.getName().indexOf(' ') + 1);
+            System.out.println("Last Name is: " + lasName);
+        });
+
+        /** Function interface */
+        System.out.println("\nLast name with Function interface");
+        Function<Employee, String> getLastName = (Employee employee) -> {
+            return employee.getName().substring(employee.getName().indexOf(' ') + 1);
+        };
+
+        String lastName = getLastName.apply(employees.get(1));
+        System.out.println(lastName);
+
+        Function<Employee, String> getFirstName = (Employee employee) -> {
+            return employee.getName().substring(0, employee.getName().indexOf(' '));
+        };
+
+        System.out.println("\nLast name / First name loop");
+        Random random1 = new Random();
+        for (Employee employee : employees) {
+            if (random1.nextBoolean()) {
+                System.out.println(getAName(getFirstName, employee));
+            } else {
+                System.out.println(getAName(getLastName, employee));
+            }
+        }
+    }
+
+    private static String getAName(Function<Employee, String> getName, Employee employee) {
+        return getName.apply(employee);
     }
 
     private static void printEmployeesByAge(List<Employee> employees,

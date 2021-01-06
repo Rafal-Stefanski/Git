@@ -3,3 +3,4 @@
 out/
 target/
 debugger.xml
+.idea/vcs.xml
