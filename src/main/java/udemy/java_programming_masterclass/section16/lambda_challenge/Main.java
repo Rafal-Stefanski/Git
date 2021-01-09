@@ -1,6 +1,7 @@
 package udemy.java_programming_masterclass.section16.lambda_challenge;
 
 import java.util.function.Function;
+import java.util.function.Supplier;
 
 public class Main {
     public static void main(String[] args) {
@@ -43,23 +44,34 @@ public class Main {
         /** #4 Write a method called everySecondCharacter that accepts the function as a parameter and executes it with the argument "12345678990 */
 
         /** #5 Using bonus version, call the method with lambdaFunction created earlier, and String "12345678990 */
-        System.out.println(everySecondCharacter(lambdaFunction,"1234567890"));
+        System.out.println(everySecondCharacter(lambdaFunction, "1234567890"));
 
-        /** #5 Write Lambda expression that maps to the java.util.Supplier interface. This lambda should return the string "I love Java!". Assign it ot variable called iLoveJava. */
+        /** #6 Write Lambda expression that maps to the java.util.Supplier interface. This lambda should return the string "I love Java!". Assign it ot variable called iLoveJava. */
+//        Supplier<String> iLoveJava = () -> "I love Java!";
+//        With return statement:
+        Supplier<String> iLoveJava = () -> {
+            return "I love Java!";
+        };
+
+        /** #7 Use Supplier to assign the string "I love Java!" to a variable called supplierResult, than print variable to the console */
+        String supplierResult = iLoveJava.get();
+        System.out.println(supplierResult);
 
     }
 
     /** for #5 interface */
-//    public interface iLoveJava(String s1) {
-//        public String someString(String s1);
-//    }
 
-    /** for #4 Challenge */
+
+    /**
+     * for #4 Challenge
+     */
     public static String everySecondCharacter(Function<String, String> func, String source) {
         return func.apply(source);
     }
 
-    /** for #2 Challenge */
+    /**
+     * for #2 Challenge
+     */
     public static String everySecondChar(String source) {
         StringBuilder returnVal = new StringBuilder();
         for (int i = 0; i < source.length(); i++) {
