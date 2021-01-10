@@ -1,7 +1,11 @@
 package udemy.java_programming_masterclass.section16.lambda_challenge;
 
+import java.util.*;
 import java.util.function.Function;
 import java.util.function.Supplier;
+import java.util.stream.Collectors;
+
+import static javafx.scene.input.KeyCode.T;
 
 public class Main {
     public static void main(String[] args) {
@@ -57,6 +61,75 @@ public class Main {
         String supplierResult = iLoveJava.get();
         System.out.println(supplierResult);
 
+        /** #9 Write code to print items in sorted order and with first letter in each name upper cased. */
+        List<String> topNames2015 = Arrays.asList(
+                "Amelia",
+                "Olivia",
+                "emily",
+                "Isla",
+                "Ava",
+                "oliver",
+                "Jack",
+                "Charlie",
+                "harry",
+                "Jacob"
+        );
+        System.out.println("*** Challenge #9 ***");
+        topNames2015
+                .stream()                           // also answer for challenge 11 with using .stream
+                .map(s -> s.toUpperCase().charAt(0) + s.substring(1))
+                .sorted(Comparator.naturalOrder())
+                .forEach(System.out::println);      // answer to Challenge #10
+
+//        System.out.println("*** Challenge #9 ***");
+        //Tim's answer
+        System.out.println("<Tim's Answer>");
+        List<String> firstUpperCaseName= new ArrayList<>();
+        topNames2015.forEach(s->firstUpperCaseName.add(s.substring(0,1).toUpperCase()+s.substring(1)));
+//        firstUpperCaseName.sort((s1,s2)->s1.compareTo(s2));
+//        firstUpperCaseName.forEach(s-> System.out.println(s));
+        // change of above lines to use ::
+        firstUpperCaseName.sort(String::compareTo);
+        firstUpperCaseName.forEach(System.out::println);
+
+        /** #11 Write code to print items in sorted order and with first letter in each name upper cased.
+         * Using .stream */
+        System.out.println("*** Challenge #11 ***");
+        topNames2015
+                .stream()
+                .map(name -> name.substring(0,1).toUpperCase() + name.substring(1))
+                .sorted(String::compareTo)
+                .forEach(System.out::println);
+
+        /** #12 Write code to print items in sorted order and with first letter in each name upper cased. */
+        System.out.println("*** Challenge #12 ***");
+        long namesBeginningWithA = topNames2015
+                .stream()
+//                .map(name -> name.substring(0,1).toUpperCase() + name.substring(1))
+                .filter(name -> name.startsWith("A"))
+                .count();
+
+        System.out.println("Number of Names beginning with A is: " + namesBeginningWithA);
+
+         /** #13 What will be following code print to the console. */
+        System.out.println("*** Challenge #13 ***");
+        topNames2015
+                .stream()
+                .map(name -> name.substring(0,1).toUpperCase() + name.substring(1))
+                .peek(System.out::println)
+                .sorted(String::compareTo);
+
+        // The Answer: Nothing, until there is terminal operation added to the chain. Because stream chains are evaluated lazily
+
+        /** #14 Add terminal operation. */
+        System.out.println("*** Challenge #14 ***");
+        topNames2015
+                .stream()
+                .map(name -> name.substring(0,1).toUpperCase() + name.substring(1))
+                .peek(System.out::println)
+                .sorted(String::compareTo) // Won't work as it's after the peek operation, that's why it's greyed out by intellij.
+//                .count(); // this added terminal operation.
+                .collect(Collectors.toList()); // other terminal operation.
     }
 
     /** for #5 interface */
