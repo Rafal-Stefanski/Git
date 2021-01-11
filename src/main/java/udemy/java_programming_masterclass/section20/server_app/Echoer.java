@@ -1,18 +1,21 @@
-package udemy.java_programming_masterclass.section20.client_server_app;
+package udemy.java_programming_masterclass.section20.server_app;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
-import java.net.ServerSocket;
 import java.net.Socket;
 
-public class Main {
+public class Echoer extends Thread {
+    private Socket socket;
 
-    public static void main(String[] args) {
-        try (ServerSocket serverSocket = new ServerSocket(5000)) {
-            Socket socket = serverSocket.accept();
-            System.out.println("Client Connected");
+    public Echoer(Socket socket) {
+        this.socket = socket;
+    }
+
+    @Override
+    public void run() {
+        try {
             BufferedReader input = new BufferedReader(
                     new InputStreamReader(socket.getInputStream()));
             PrintWriter output = new PrintWriter(socket.getOutputStream(), true);
@@ -22,11 +25,17 @@ public class Main {
                 if (echoString.equals("exit")) {
                     break;
                 }
-                output.println("Echo from server: " + echoString);
-            }
 
+                output.println(echoString);
+            }
         } catch (IOException e) {
-            System.out.println("Server exception: " + e.getMessage());
+            System.out.println("Oops: " + e.getMessage());
+        } finally {
+            try {
+                socket.close();
+            } catch (IOException e) {
+                // Oh, well!
+            }
         }
     }
 }
